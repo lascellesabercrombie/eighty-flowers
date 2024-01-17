@@ -9,6 +9,7 @@
 \usepackage{circledsteps}
 \usepackage{latexsym}
 \usepackage{parskip}
+\usepackage{xcolor}
 \usepackage[paperwidth=5.5in, paperheight=10.25in, margin=0.7in]{geometry}
 %dimensions 5in by 7.75; I have altered to bring in line with p.20 layout]
 \renewcommand{\labelitemi}{$\textendash$}
@@ -32,12 +33,12 @@
 \Circled{3} perennial .. weedy .. Eurasian .. poppy family .. {$\stackrel{\hbox{called also}}{\hbox{killwort sightwort}}$}\par
 %above lines not great at the moment in making clear where LZ starts new line for space, squeezes in a bit on the right etc
 \Circled{2} $\rightarrow$ the lesser celandine or pilewort, still used in home med. for piles\par
-"occurs locally in Eastern states.\par
+``occurs locally in Eastern states.\par
 \begin{itemize}
 \color{blue}
 \setulcolor{blue}
 \normalsize
-\item Celandine, \ul{Chelidonium majus} (\ul{Kamon}\par
+\item Celandine, \ul{Chelidonium majus} (\ul{Kamm}\par
 \tiny 
 \color{red}
 swallowort - Lewis \& Short\par
@@ -56,12 +57,19 @@ $\uparrow$ L = little frog (Buttercup \ i.e. meadow habit
 %arrow should point to Ranunculus
 \rule{10cm}{0.01cm}
 \normalsize
-\item Lavender cotton, \ul{Santolina chamaecyparissus} \ul{Kamm} p 206 illust \#25 Pt. J, planted\par 
+\item Lavender cotton, \ul{Santolina chamaecypar-} \par
+\ul{-issus} \ul{Kamm} p 206 illust \#25 Pt. J, planted\par 
 %looks v like a new entry for -issus but clearly cont from previous line
 \color{red}
 \tiny
 \newsavebox{\abc}
-\savebox{\abc}{\parbox{0.5in}{How great fallen are the great L.Z.}}%
+\savebox{\abc}{
+    \fcolorbox{blue}{white}{
+    \begin{minipage}{0.5in}
+        How great fallen are the great L.Z.
+    \end{minipage}
+    }
+    }
 \begin{turn}{25}\usebox{\abc}\end{turn}
 %a 2 and 3 in there? presumably an LZ quotation
 \color{blue}
