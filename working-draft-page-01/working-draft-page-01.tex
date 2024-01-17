@@ -1,6 +1,7 @@
 \documentclass[a4paper,10pt]{article}
 
 \usepackage[utf8]{inputenc}
+\usepackage[absolute]{textpos}
 \usepackage{color,soul}
 \usepackage{ulem}
 \usepackage{blindtext}
@@ -9,10 +10,11 @@
 \usepackage{circledsteps}
 \usepackage{latexsym}
 \usepackage{parskip}
+\usepackage{stix}
 \usepackage{xcolor}
-\usepackage[paperwidth=5.5in, paperheight=10.25in, margin=0.7in]{geometry}
+\usepackage[paperwidth=5.5in, paperheight=20in, margin=0.7in]{geometry}
 %dimensions 5in by 7.75; I have altered to bring in line with p.20 layout]
-\renewcommand{\labelitemi}{$\textendash$}
+\renewcommand{\labelitemi}{-}
 \setulcolor{red}
 
 \begin{document}
@@ -104,13 +106,22 @@ under g\'eum (Rose family)
 \normalsize
 \item wild geranium (\ul{Taylor}, Geranicum maculatum; also called alumsroot \& chocolateflower\par
 \color{red}
-but (is) not\par
-\ul{Heuchera}\par
-also called\par
- alumroot\par
-(saxifrage\par
-family)
-\color{blue}
+\begin{textblock*}{3.22in}(0.5cm,21.5cm)%
+    \small
+    \begin{minipage}{3.22in} 
+        \color{red}
+        \setulcolor{red}
+        but $\stackrel{\hbox{is}}{\hbox{$\caretinsert$}}$ not\par
+        \ul{Heuchera}\par
+        also called\par
+         alumroot\par
+        (saxifrage\par
+        family)
+        \color{blue}
+        \normalsize
+  \end{minipage}%
+  \end{textblock*}%
+
 [the relation to those]{$\stackrel{\hbox{identified*}}{\hbox{Oct 30/74}}$}\par
 *neighbor called it wild strawberry, but\par 
 no berry\par
