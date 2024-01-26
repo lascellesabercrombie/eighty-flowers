@@ -3,7 +3,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[absolute]{textpos}
 \usepackage{changepage}
-\usepackage{color,soul}
 \usepackage{ulem}
 \usepackage{blindtext}
 \usepackage{rotating}
@@ -11,11 +10,20 @@
 \usepackage{circledsteps}
 \usepackage{latexsym}
 \usepackage{parskip}
+\usepackage{soul}
 \usepackage{stix}
 \usepackage{tikz}
 \usepackage{xcolor}
 \usepackage[paperwidth=5.5in, paperheight=20in, margin=0.7in]{geometry}
 \usetikzlibrary{arrows.meta}
+
+\newcommand{\ulfelttip}[1]{%
+    \tikz[baseline=(to_underline.base)]{
+        \node[inner sep=2pt,outer sep=1pt] (to_underline) {#1};
+        \draw[line width=0.05in, opacity=0.6] (to_underline.south west) -- (to_underline.south east);
+    }%
+}%
+
 %dimensions 5in by 7.75; I have altered to bring in line with p.20 layout]
 \renewcommand{\labelitemi}{-}
 \setulcolor{red}
