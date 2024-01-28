@@ -19,6 +19,7 @@
 
 \newcommand{\ulfelttip}[1]{%
     \tikz[baseline=(to_underline.base)]{
+        \color{red}
         \node[inner sep=2pt,outer sep=1pt] (to_underline) {#1};
         \draw[line width=0.05in, opacity=0.6] (to_underline.south west) -- (to_underline.south east);
     }%
@@ -145,8 +146,8 @@ pl\ul{ant}
 \begin{tikzpicture}[remember picture,overlay]
     \color{blue}
     \draw[->] (-5.5, 0.3) .. controls (-3, 0.5) .. (-2.5, 0.2);
-\end{tikzpicture}
-\item \ul{thyme (time)} (Pt. J. {$\stackrel{\hbox{Aug-}}{\hbox{Sep}}$}74) ($\stackrel{\hbox{see \#70}}{\hbox{pVI v.i}}$
+\end{tikzpicture}\
+\item \ulfelttip{\color{blue} thyme} (\ulfelttip{\color{blue}\ul{time}}) (Pt. J. {$\stackrel{\hbox{Aug-}}{\hbox{Sep}}$}74) ($\stackrel{\hbox{see \#70}}{\hbox{pVI v.i}}$
 \begin{tikzpicture}[remember picture,overlay,line width=0.05in,opacity=0.6]
     \color{red}
     \draw (-6.7,0) --  (-6.5, -0.1) -- (-6, 0.5);
@@ -286,9 +287,9 @@ sour gum, pepperidge \color{red} (\ul{Cheyney} What Tree is That?)
 
 \item Catnip - Same as \underline{Glecoma} hederacea (Taylor)\par
 \setulcolor{red}
-?\#29 p9 III v.i. ``The \ul{catnip and the} \par
-\ul{amaranth! - man's} \ul{earthly household} \par
-\ul{peace} \& \ul{the ever-encroa}ch\ul{ing appetite} \ul{for God}"\par
+?\#29 p9 III v.i. ``The \ulfelttip{\color{blue}catnip and the} \par
+\ulfelttip{\color{blue}amaranth! - man's} \ulfelttip{\color{blue}earthly household} \par
+\ulfelttip{\color{blue}peace} \& \ulfelttip{\color{blue}the ever-encroaching appetite} \ulfelttip{\color{blue}for God}"\par
 \setulcolor{blue}
 Melville, \ul{Pierre} Bk xxv IV (p356 \ul{Signet} ed.)
 \color{red}
