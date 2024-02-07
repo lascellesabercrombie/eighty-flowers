@@ -8,6 +8,8 @@
 \usepackage{blindtext}
 \usepackage[LGR,T1]{fontenc}
 \usepackage[greek,english]{babel}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 
 \color{blue}
 \setulcolor{blue}
@@ -47,6 +49,11 @@ called horse-thyme\par
 \end{flushright}
 \begin{flushleft}
 \end{flushleft}
+\begin{tikzpicture}[remember picture,overlay]
+    \color{red}
+    \draw[->] (10, 3) -- (10, 2.6);
+	\draw[->] (9, 2.7) -- (9.5, 2.6);
+\end{tikzpicture}
 \normalsize
 \color{blue}
 \begin{itemize}
