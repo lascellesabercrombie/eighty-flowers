@@ -4,6 +4,7 @@
 \usepackage{color,soul}
 \usepackage{circledsteps}
 \usepackage{ulem}
+\usepackage{ragged2e}
 \usepackage{blindtext}
 \usepackage[LGR,T1]{fontenc}
 \usepackage[greek,english]{babel}
@@ -29,11 +30,24 @@ Notes \& orig. drafts\\
 
 %arrows from serpyllum and century need to point to thymus
 \color{red}
-variety: 
-T. serpyllum -> \ul{Century} - common wild thyme Prov. 
-E
-thymus vulgaris sometimes 
-called horse-thyme
+\small
+\begin{flushright}
+\begin{minipage}[t][2cm]{2.5cm}
+variety:\par
+T. serpyllum\par
+\end{minipage}
+\begin{minipage}[t][2cm]{4.5cm}
+\raggedleft
+\setulcolor{red}
+\ul{Century} - common\par
+wild thyme Prov. E\par 
+thymus vulgaris sometimes\par
+called horse-thyme\par
+\end{minipage}
+\end{flushright}
+\begin{flushleft}
+\end{flushleft}
+\normalsize
 \color{blue}
 \begin{itemize}
 \renewcommand{\labelitemi}{$\textemdash$}
