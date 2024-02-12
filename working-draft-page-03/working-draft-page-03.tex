@@ -6,9 +6,11 @@
 \usepackage{ulem}
 \usepackage{ragged2e}
 \usepackage{blindtext}
+\usepackage{nopageno}
 \usepackage[LGR,T1]{fontenc}
 \usepackage[greek,english]{babel}
 \usepackage{tikz}
+\usepackage[paperwidth=5.5in, paperheight=15in, margin=0.7in]{geometry}
 \usetikzlibrary{arrows.meta}
 
 \color{blue}
@@ -17,6 +19,12 @@
 \newcommand{\tickitem}{%
     \begin{tikzpicture}[remember picture,overlay]
         \draw[red] (-0.7, 0.1) -- (-0.6, 0) -- (-0.5, 0.5);
+    \end{tikzpicture}%
+}
+\newcommand{\thymusarrows}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \draw[->, red] (-1.7, 0.5) -- (-1, 0.3);
+		\draw[->, red] (-0.5,1) -- (-0.5, 0.5);
     \end{tikzpicture}%
 }
 \begin{document}
@@ -48,17 +56,12 @@ T. serpyllum\par
 \setulcolor{red}
 \ul{Century} - common\par
 wild thyme Prov. E\par 
-thymus vulgaris sometimes\par
+thymus \thymusarrows vulgaris sometimes\par
 called horse-thyme\par
 \end{minipage}
 \end{flushright}
 \begin{flushleft}
 \end{flushleft}
-\begin{tikzpicture}[remember picture,overlay]
-    \color{red}
-    \draw[->] (10, 3) -- (10, 2.6);
-	\draw[->] (9, 2.7) -- (9.5, 2.6);
-\end{tikzpicture}
 \normalsize
 \color{blue}
 \begin{itemize}
