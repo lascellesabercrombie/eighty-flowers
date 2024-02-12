@@ -9,6 +9,7 @@
 \usepackage{nopageno}
 \usepackage[LGR,T1]{fontenc}
 \usepackage[greek,english]{babel}
+\usepackage[absolute]{textpos}
 \usepackage{tikz}
 \usepackage[paperwidth=5.5in, paperheight=15in, margin=0.7in]{geometry}
 \usetikzlibrary{arrows.meta}
@@ -161,17 +162,23 @@ L. Nepeta > Etrurian city .. /[?species?] \ul{Nepeta}\par
 	}
 $} 
 \end{itemize}
-
 %down the lh margin
-cf \ul{glecoma}
-(Gk. mint)
-\ul{hederacea}
-or gill-over-
-the-ground
-or field balm
-flowers (clusters)
-light to dark
-blue
+\begin{textblock*}{3.22in}(0.5cm,19cm)%
+    \tiny
+	\color{blue}
+    \begin{minipage}{3.22in} 
+		cf \ul{glecoma}\par
+		(Gk. mint)\par
+		\ul{hederacea}\par
+		= ground ivy\par
+		or gill-over-\par
+		the-ground\par
+		or field balm\par
+		flowers (clusters)\par
+		light to dark\par
+		blue\par
+  \end{minipage}%
+  \end{textblock*}%
 
 L. ripa - river
 bank, shore,
