@@ -11,6 +11,7 @@
 \usepackage[greek,english]{babel}
 \usepackage{stix} %for caret
 \usepackage[absolute]{textpos}
+\usepackage{stackengine} %for multiple accents on one character
 \usepackage{tikz}
 \usepackage[paperwidth=5.5in, paperheight=15in, margin=0.7in]{geometry}
 \usetikzlibrary{arrows.meta}
@@ -118,7 +119,7 @@ peartree my handiwork
 in summer to fruit the upper stem
 fragrant-\sout{fruited})
 \item \tickitem as happens in 10 yrs
-\item \tickitem Nepeta%needs accents
+\item \tickitem N\stackon[-5pt]{\u{e}}{\'{}}p\u{e}ta
  (\ul{catnip} [corruption of] catmint) 
  {$\stackrel
 	{\hbox
