@@ -9,6 +9,7 @@
 \usepackage{nopageno}
 \usepackage[LGR,T1]{fontenc}
 \usepackage[greek,english]{babel}
+\usepackage{stix} %for caret
 \usepackage[absolute]{textpos}
 \usepackage{tikz}
 \usepackage[paperwidth=5.5in, paperheight=15in, margin=0.7in]{geometry}
@@ -66,7 +67,7 @@ called horse-thyme\par
 \normalsize
 \color{blue}
 \begin{itemize}
-\renewcommand{\labelitemi}{$\textemdash$}
+\renewcommand{\labelitemi}{-}
 \item thyme pronounced time
 
 
@@ -132,7 +133,7 @@ $} \par
 \tickitem aromatic* .. more or less hairy .. stem\sout{s} square\par
 \tickitem .. leaves hearth-shaped margins toothed ..\par
 \tickitem blue or white flowers, often whorled close\par
-\tickitem clusters on stems [(or?) terminal spike] .. corolla 2-lipped, 2-\par
+\tickitem clusters on stems $\stackrel{\hbox{(or?) terminal spike}}{\hbox{$\caretinsert$}}$ .. corolla 2-lipped, 2-\par
 upper, 30lower joined at base, forming\par
 narrow tube .. fruit a 20-celled capsule\par
 \setulcolor{red}
