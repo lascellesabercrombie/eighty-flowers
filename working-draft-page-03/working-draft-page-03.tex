@@ -29,7 +29,6 @@
 		\draw[->, red] (-0.5,1) -- (-0.5, 0.5);
     \end{tikzpicture}%
 }
-
 \newcommand{\multilinebrace}{
 	\begin{tikzpicture}[remember picture,overlay]
 		\draw [pen colour ={red},
@@ -224,14 +223,18 @@ $}
 		\sout{fran}\par
 	\end{minipage}%
 \end{textblock*}%
+% done as circled text but was the "therefore" (?) meant 
+% to be included or excluded? 
 \begin{textblock*}{3.22in}(0.5cm,29cm)%
 	\tiny
 	\begin{minipage}{3.22in} 
 		\color{red}
-		\stackengine{\stackgap}{therefore?}{likely}{O}{l}
+		\Circled{
+\stackengine{\stackgap}{therefore?}{likely}{O}{l}
 {\quietstack}{\useanchorwidth}{\stacktype}
 \stackengine{\stackgap}{[thus]}{Gk toi}{O}{\stackalignment}
-{\quietstack}{\useanchorwidth}{\stacktype}\par
+{\quietstack}{\useanchorwidth}{\stacktype}
+}\par
 \multilinebrace
 mace =\par
 nutmeg
