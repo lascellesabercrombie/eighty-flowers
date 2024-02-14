@@ -14,8 +14,7 @@
 \usepackage{stackengine} %for multiple accents on one character
 \usepackage{tikz}
 \usepackage[paperwidth=5.5in, paperheight=15in, margin=0.7in]{geometry}
-\usetikzlibrary{arrows.meta}
-
+\usetikzlibrary{arrows.meta,decorations.pathreplacing,calligraphy}
 \color{blue}
 \setulcolor{blue}
 
@@ -29,6 +28,15 @@
         \draw[->, red] (-1.7, 0.5) -- (-1, 0.3);
 		\draw[->, red] (-0.5,1) -- (-0.5, 0.5);
     \end{tikzpicture}%
+}
+
+\newcommand{\multilinebrace}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw [pen colour ={red},
+		decorate, 
+		decoration = {calligraphic brace}
+		] (-0.1,-0.3) -- (-0.1,0.2);
+	\end{tikzpicture}
 }
 \begin{document}
 \begin{center}
@@ -216,12 +224,20 @@ $}
 		\sout{fran}\par
 	\end{minipage}%
 \end{textblock*}%
-
-?from?
-?likely? Gk [??]
-?? [thus]
-mace =
+\begin{textblock*}{3.22in}(0.5cm,29cm)%
+	\tiny
+	\begin{minipage}{3.22in} 
+		\color{red}
+		\stackengine{\stackgap}{therefore?}{likely}{O}{l}
+{\quietstack}{\useanchorwidth}{\stacktype}
+\stackengine{\stackgap}{[thus]}{Gk toi}{O}{\stackalignment}
+{\quietstack}{\useanchorwidth}{\stacktype}\par
+\multilinebrace
+mace =\par
 nutmeg
+	\end{minipage}%
+\end{textblock*}%
+
 \end{flushleft}
 \end{document}
 
