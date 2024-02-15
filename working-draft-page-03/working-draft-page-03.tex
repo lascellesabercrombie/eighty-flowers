@@ -29,6 +29,12 @@
 		\draw[red] (-0.9, 0.4) -- (-0.5, 0);
     \end{tikzpicture}%
 }
+\newcommand{\crosstickitem}{%
+    \begin{tikzpicture}[remember picture,overlay]
+		\draw[blue] (-1, 0.1) -- (-0.9, 0) -- (-0.5, 0.6);
+		\draw[red] (-1, 0.4) -- (-0.5, 0);
+    \end{tikzpicture}%
+}
 \newcommand{\thymusarrows}{%
     \begin{tikzpicture}[remember picture,overlay]
         \draw[->, red] (-1.7, 0.5) -- (-1, 0.3);
@@ -82,7 +88,7 @@ called horse-thyme\par
 \color{blue}
 \begin{itemize}
 \renewcommand{\labelitemi}{-}
-\item thyme pronounced time
+\item \crosstickitem thyme pronounced time
 
 
 \item \crossitem tread a measure - "horse for single harness 
