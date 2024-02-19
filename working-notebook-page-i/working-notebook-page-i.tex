@@ -7,6 +7,7 @@
 \usepackage{rotating}
 \usepackage{nopageno}
 \usepackage{circledsteps}
+\usepackage{stackengine}
 \usepackage[paperwidth=5.5in, paperheight=15in, margin=0.25in]{geometry}
 %dimensions 5in by 7.75; added .5 and to allow .25 margin
 \renewcommand{\labelitemi}{$\textendash$}
@@ -48,12 +49,8 @@ orange flower, closed trumpet\\
 work with [arrow]
 \#5 
 \ul{AZALEA}
-
-heath f.\par
-$\downarrow$\par
 \color{black}
-\item Andromeda
-
+\item \color{red} \Circled[inner ysep=1cm]{\Longstack{{heath f.} $\downarrow$ \color{black}{Andromeda}}}
 \color{red}cf or subs. African Lily = Agapanthus
 Africanus (Lily-of-the-Nile) or
 Agapanthus mooreanus. \sout{Identified Pt J. June 14/75}
