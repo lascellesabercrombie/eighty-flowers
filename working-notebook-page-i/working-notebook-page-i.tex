@@ -10,8 +10,26 @@
 \usepackage{stackengine}
 \usepackage{tikz}
 \usepackage[paperwidth=5.5in, paperheight=15in, margin=0.25in]{geometry}
-\usetikzlibrary{arrows.meta,decorations.pathreplacing,calligraphy}
 %dimensions 5in by 7.75; added .5 and to allow .25 margin
+\usetikzlibrary{arrows.meta,decorations.pathreplacing,calligraphy}
+
+
+\newcommand{\multilineparenthesisleft}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw [pen colour ={blue},
+		decorate, 
+		decoration = {calligraphic curved parenthesis}
+		] (0,0) -- (0,0.5);
+	\end{tikzpicture}
+}
+\newcommand{\multilineparenthesisright}{
+    \begin{tikzpicture}[remember picture,overlay]
+    \draw [pen colour ={blue},
+    decorate, 
+    decoration = {calligraphic curved parenthesis}
+    ] (-0.2,0.5) -- (-0.2,0);
+    \end{tikzpicture}
+}
 \renewcommand{\labelitemi}{$\textendash$}
 \setulcolor{blue}
 
@@ -74,7 +92,11 @@ includes pasque-flower
 \item Arbutus
 \color{blue}
 \small
-{\Longstack{{(evergreen tree} {Ericaceae heath family)}}}\par
+\multilineparenthesisleft
+{\Longstack[l]{evergreen {tree -}}}
+{\Longstack{{Ericaceae} {heath family}}}
+\multilineparenthesisright
+\par
 \normalsize
 %big brackets
 \color{black} 
