@@ -14,17 +14,17 @@
 \usetikzlibrary{arrows.meta,decorations.pathreplacing,calligraphy}
 
 
-\newcommand{\multilineparenthesisleft}{
+\newcommand{\multilineparenthesisleft}[1]{
 	\begin{tikzpicture}[remember picture,overlay]
-		\draw [pen colour ={blue},
+		\draw [pen colour ={{#1}},
 		decorate, 
 		decoration = {calligraphic curved parenthesis}
 		] (0,0) -- (0,0.5);
 	\end{tikzpicture}
 }
-\newcommand{\multilineparenthesisright}{
+\newcommand{\multilineparenthesisright}[1]{
     \begin{tikzpicture}[remember picture,overlay]
-    \draw [pen colour ={blue},
+    \draw [pen colour ={{#1}},
     decorate, 
     decoration = {calligraphic curved parenthesis}
     ] (-0.2,0.5) -- (-0.2,0);
@@ -92,10 +92,10 @@ includes pasque-flower
 \item Arbutus
 \color{blue}
 \small
-\multilineparenthesisleft
+\multilineparenthesisleft{blue}
 {\Longstack[l]{evergreen {tree -}}}
 {\Longstack{{Ericaceae} {heath family}}}
-\multilineparenthesisright
+\multilineparenthesisright{blue}
 \par
 \normalsize
 %big brackets
