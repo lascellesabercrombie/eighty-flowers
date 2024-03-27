@@ -8,8 +8,9 @@
 \usepackage{nopageno}
 \usepackage{circledsteps}
 \usepackage{stackengine}
+\usepackage[absolute]{textpos}
 \usepackage{tikz}
-\usepackage[paperwidth=5.5in, paperheight=15in, margin=0.25in]{geometry}
+\usepackage[paperwidth=5.5in, paperheight=15in, margin=0.5in]{geometry}
 %dimensions 5in by 7.75; added .5 and to allow .25 margin
 \usetikzlibrary{arrows.meta,decorations.pathreplacing,calligraphy}
 
@@ -227,11 +228,27 @@ for contrast only
 % text to position absolutely
 
 % by andromeda
-\color{red}
-\setulcolor{red}
-work with [arrow]
-\#5 
-\ul{AZALEA}
+\begin{textblock*}{3.22in}(0.2cm,2.4cm)%
+	\tiny
+	\rotatebox{25}{
+	\begin{minipage}{3.22in} 
+		\color{red}
+		\setulcolor{red}
+		work\par 
+		with\par
+		\tiny
+		\#5\par
+		\ul{AZALEA}				
+	\end{minipage}%
+	}
+\end{textblock*}%
+\begin{textblock*}{1in}(1cm,5.7cm)%
+	\large
+	\color{red}
+	\rotatebox{-20}{
+$\rightarrow$
+	}
+\end{textblock*}%
 
 % by azalea
 red \ul{via Jap} \color{blue} \& Korea 
