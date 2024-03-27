@@ -30,6 +30,16 @@
     ] (-0.2,0.5) -- (-0.2,0);
     \end{tikzpicture}
 }
+% n.b. a bit bigger than multilinebrace used in p.3
+\newcommand{\multilinebrace}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw [pen colour ={red},
+		decorate, 
+		decoration = {calligraphic brace}
+		] (-0.1,-0.5) -- (-0.1,0.2);
+	\end{tikzpicture}
+}
+
 \renewcommand{\labelitemi}{$\textendash$}
 \setulcolor{blue}
 
@@ -179,11 +189,13 @@ subst. cinquefoil (Rose family) Planted Pt. J. 6/4/75
 \normalsize
 \item campanula (rotundifolia, Scot \ul{bluebell}\par
  or harebell; cf C - rapunculoides)\par
-
-
-Venus's-looking-glass= Campanula \ul{Speculum} (bellflower family)
+\multilinebrace
+\color{blue}
+\scriptsize
+Venus's-looking-glass = {\Longstack[l]{{Campanula \ul{Speculum}} {(bellflower family)}}}\par 
 \color{red}
-Field Flowers p9 illust " belle looking glass
+Field Flowers p9 illust \color{blue}" \color{red}belle looking glass\par
+\normalsize
 \color{black}
 \item clematis (\ul{Crispa} \color{blue}= \color{black} blue jasmine \color{blue}= \color{black} "bluebell"
 %or are the quote marks blue too?
