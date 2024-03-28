@@ -7,6 +7,7 @@
 \usepackage{rotating}
 \usepackage{nopageno}
 \usepackage{circledsteps}
+\usepackage{setspace}
 \usepackage{stackengine}
 \usepackage[absolute]{textpos}
 \usepackage{tikz}
@@ -251,9 +252,16 @@ $\rightarrow$
 \end{textblock*}%
 
 % by azalea
-red \ul{via Jap} \color{blue} \& Korea 
-\color{red}= obtusa,
-blooms Apr.May
+\begin{textblock*}{4in}(0.1cm,13cm)%
+	\tiny
+	\begin{minipage}{4in} 
+		{\setstretch{1.5}
+		red \ul{via Jap} \color{blue} \& Korea\par
+		\color{red}= obtusa,\par
+		blooms Apr.May\par
+		}
+	\end{minipage}%
+\end{textblock*}%
 
 % by cactus
 (Rose family)
