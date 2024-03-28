@@ -41,6 +41,13 @@
 		] (-0.1,-0.5) -- (-0.1,0.2);
 	\end{tikzpicture}
 }
+\newcommand{\marginalplus}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.1,0.05) -- (0.1,0.05);
+		\draw (0,0.15) -- (0,-0.05);
+		
+	\end{tikzpicture}
+}
 
 \renewcommand{\labelitemi}{$\textendash$}
 \setulcolor{blue}
@@ -169,7 +176,7 @@ cinquefoil see note \ul{Weeds} \Longstack[l]{{p.VIII} {6/4/75}}
 \Longunderstack[l]{{\pasturerosenote} {pasture rose}}
 \color{black}
 \normalsize
-\item cactus \footnotesize(``rose-mauve fluted" \& P's)\par
+\item \color{red}\marginalplus \color{black}cactus \footnotesize(``rose-mauve fluted" \& P's)\par
 \tiny
 \color{blue}
 \ul{P's} \ul{"red} \ul{top,"} \ul{cardinal} \ul{hat}
