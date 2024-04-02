@@ -56,15 +56,26 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\tickcross}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.1,0.2) -- (0,0);
+		\draw (0,0) -- (1,1);
+		\draw (0,1) -- (1,0);
+	\end{tikzpicture}
+}
+
 \renewcommand{\labelitemi}{$\textendash$}
 \setulcolor{blue}
 
 \begin{document}
-\begin{minipage}{0.2\textwidth}
+\begin{minipage}{0.3\textwidth}
 \color{red}
-*See p. I A-B
-for possible
-substitutes
+*See p. I A-B\par
+\color{blue}
+\tickcross
+\color{red}
+for possible\par
+substitutes\par
 %something has been written over along with ticks - fibit?
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
