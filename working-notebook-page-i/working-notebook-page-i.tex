@@ -78,6 +78,13 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\fullpagecross}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (0,0) -- (8,-20);
+		\draw (8,0) -- (0,-20);
+	\end{tikzpicture}
+}
+
 \renewcommand{\labelitemi}{$\textendash$}
 \setulcolor{blue}
 
@@ -115,13 +122,15 @@ I
 \end{minipage}
 \begin{enumerate}
 \color{black}
-\item Aloe\\
-(Paget) saw-tooth leaf resembles cactus,
-orange flower, closed trumpet\\
+\item $\fullpagecross$ $\color{red}\fullpagecross$Aloe\par
+\footnotesize
+(Paget) saw-tooth leaf resembles cactus,\par
+orange flower, closed trumpet\par
 \color{black}
+\normalsize
 \item \color{red} \Circled[inner ysep=1cm]{\Longstack{{heath f.} $\downarrow$ \color{black}{Andromeda}}}
 \color{red}
-\small
+\footnotesize
 {\Longstack{{cf or subs. African Lily = Agapanthus} {Africanus (Lily-of-the-Nile) or}}}\par
 Agapanthus mooreanus. \sout{Identified Pt J. June 14/75}\par
 \setulcolor{red}
@@ -130,7 +139,7 @@ See \ul{Taylor}
 \color{black}
 \item Anemone
 \color{red}
-\small
+\footnotesize
 \savestack{\anemoneinfo}{\Longstack[l]{{see also Wood Anemone in} {\ul{Woodland Flowers} illust. color p 56}}}%
 		\Longunderstack[r]{{\anemoneinfo} {anemone quinquefolia}}\par
 \normalsize
