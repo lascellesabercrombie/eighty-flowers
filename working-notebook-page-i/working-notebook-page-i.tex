@@ -64,6 +64,20 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\bigtick}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.1,0.3) -- (0.1,0);
+		\draw (0.1,0) -- (2,2);
+	\end{tikzpicture}
+}
+
+\newcommand{\smalltick}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.1,0.2) -- (0,0);
+		\draw (0,0) -- (1,1);
+	\end{tikzpicture}
+}
+
 \renewcommand{\labelitemi}{$\textendash$}
 \setulcolor{blue}
 
@@ -75,7 +89,10 @@
 \tickcross
 \color{red}
 for possible\par
-substitutes\par
+substi$\color{blue} \smalltick \color{red}$tutes\par
+\color{blue}
+\bigtick
+\color{red}
 %something has been written over along with ticks - fibit?
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
