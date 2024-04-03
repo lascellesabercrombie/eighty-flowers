@@ -85,6 +85,20 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\smallcross}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.1,0.2) -- (0.1,0);
+		\draw (0.1, 0.2) -- (-0.1,0);
+	\end{tikzpicture}
+}
+
+\newcommand{\tallercross}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.2,0.6) -- (0.1,0);
+		\draw (0.2, 0.6) -- (-0.1,0);
+	\end{tikzpicture}
+}
+
 \renewcommand{\labelitemi}{$\textendash$}
 \setulcolor{blue}
 
@@ -231,12 +245,13 @@ cinquefoil see note \ul{Weeds} \Longstack[l]{{p.VIII} {6/4/75}}
 %arrow
 \scriptsize
 \color{red}
-(See notes \ul{Weeds} 
+(Se$\color{black}\smallcross$e
+ notes$\color{black}\smallcross$ \ul{Weeds} 
 \setulcolor{blue}
-pVIII \& \ul{work} \ul{cinquefoil} with %arrow
+pVIII + \ul{work} \ul{cinquefoil} with %arrow
  \color{blue}\Circled{\color{red}Venus's Looking Glass}\par
  \color{red}
-subst. cinquefoil (Rose family) Planted Pt. J. 6/4/75
+\hspace{1.5cm}sub$\color{black}\tallercross$st. cin$\color{black}\tallercross$que$\color{black}\tallercross$foi$\color{black}\tallercross$l (Ro$\color{black}\tallercross$se fa$\color{black}\tallercross$mily) Planted Pt. J. 6/4/75
 
 \color{black}
 \setulcolor{black}
