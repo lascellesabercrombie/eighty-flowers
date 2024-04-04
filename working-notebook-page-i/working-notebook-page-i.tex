@@ -78,6 +78,13 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\smallertick}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.1,0.1) -- (0,-0.1);
+		\draw (0,-0.1) -- (0.4,0.6);
+	\end{tikzpicture}
+}
+
 \newcommand{\fullpagecross}{
 	\begin{tikzpicture}[remember picture,overlay]
 		\draw (0,0) -- (8,-20);
@@ -231,14 +238,14 @@ veined leaf-like red petals) {$\stackrel{\hbox{\color{red}{cf\#26}}}{\hbox{\colo
 cinquefoil see note \ul{Weeds} \Longstack[l]{{p.VIII} {6/4/75}}
 \savestack{\pasturerosenote}
 {\Longstack[l]{{work with}}}
-\Longunderstack[l]{{\pasturerosenote} {pasture rose}}
+\Longunderstack[l]{{\pasturerosenote} {pasture$\color{blue}\smallertick$ rose}}
 \color{black}
 \normalsize
 
-\item \color{red}\biggerbrace \marginalplus \color{black}cactus \footnotesize(``rose-mauve fluted" \& P's)\par
+\item \color{red}\biggerbrace \marginalplus \color{black}cactus$\color{blue}\smallertick$ \footnotesize(``rose-mauve$\color{blue}\smallertick$ fluted" \& P's)\par
 \tiny
 \color{blue}
-\ul{P's} \ul{"red} \ul{top,"} \ul{cardinal} \ul{hat}
+\ul{P's} \ul{"red} \ul{top,"}$\color{red}\bigtick$ \ul{cardinal} \ul{hat}
 \normalsize
 \color{black}
 \item camellia (soft red berry, looks hard : Bellagio)\par
@@ -313,7 +320,7 @@ $\rightarrow$
 \begin{textblock*}{4in}(0.1cm,20.3cm)%
 	\tiny
 	\begin{minipage}{4in} 
-		(Rose family)\par
+		(Rose$\color{blue}\smallertick$ family)\par
 		\color{blue}
 		finished\par
 		No. 12\par
