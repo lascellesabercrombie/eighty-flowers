@@ -99,6 +99,13 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\crossabove}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.2,0.5) -- (0.2,0.1);
+		\draw (0.2, 0.5) -- (-0.2,0.1);
+	\end{tikzpicture}
+}
+
 \newcommand{\tallercross}{
 	\begin{tikzpicture}[remember picture,overlay]
 		\draw (-0.2,0.6) -- (0.1,0);
@@ -264,7 +271,7 @@ pVIII + \ul{work} \ul{cinquefoil} with %arrow
 \setulcolor{black}
 \normalsize
 \item campanula (rotundifolia, Scot \ul{bluebell}\par
- or harebell; cf C - rapunculoides)\par
+ or harebell; cf$\color{red}\crossabove$ C - $\color{red}\smallcross$ra$\color{red}\crossabove$puncu$\color{red}\smallcross$loide$\color{red}\smallcross$s)\par
 \multilinebrace
 \color{blue}
 \scriptsize
