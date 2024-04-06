@@ -117,6 +117,12 @@
 	\tikz[remember picture,overlay,hobby] \draw plot coordinates {(-0.1,0.1) (0.2,0.2) (-0.1,-0.4) (0.1,-0.35)};
 }
 
+\newcommand{\elevenvenusarrow}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw[->] (0,0.1) .. controls (5,0)  .. (6.9,-0.1);
+	\end{tikzpicture}
+}
+
 \renewcommand{\labelitemi}{$\textendash$}
 \setulcolor{blue}
 
@@ -341,7 +347,7 @@ $\rightarrow$
 \begin{textblock*}{4in}(0.3cm,22cm)%
 	\normalsize
 	\begin{minipage}{4in} 
-		\color{blue}11.\par		
+		\color{blue}11.$\elevenvenusarrow$\par		
 	\end{minipage}%
 \end{textblock*}%
 
