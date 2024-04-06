@@ -11,6 +11,7 @@
 \usepackage{stackengine}
 \usepackage[absolute]{textpos}
 \usepackage{tikz}
+\usetikzlibrary{hobby}
 \usepackage[paperwidth=5.3in, paperheight=15in, margin=0.5in]{geometry}
 %dimensions 5in by 7.75; added .5 and to allow .25 margin
 \usetikzlibrary{arrows.meta,decorations.pathreplacing,calligraphy}
@@ -111,6 +112,10 @@
 		\draw (-0.2,0.6) -- (0.1,0);
 		\draw (0.2, 0.6) -- (-0.1,0);
 	\end{tikzpicture}
+}
+
+\newcommand{\curvedline}{
+	\tikz[remember picture,overlay,hobby] \draw plot coordinates {(-0.1,0.1) (0.2,0.2) (-0.1,-0.4) (0.1,-0.35)};
 }
 
 \renewcommand{\labelitemi}{$\textendash$}
@@ -270,7 +275,7 @@ pVIII + \ul{work} \ul{cinquefoil} with %arrow
 \color{black}
 \setulcolor{black}
 \normalsize
-\item campanula (rotundifolia, Scot \ul{bluebell}\par
+\item campa$\color{red}\curvedline$nula$\color{red}\curvedline$ (rotundifolia, Scot \ul{bluebell}\par
  or harebell; cf$\color{red}\crossabove$ C - $\color{red}\smallcross$ra$\color{red}\crossabove$puncu$\color{red}\smallcross$loide$\color{red}\smallcross$s)\par
 \multilinebrace
 \color{blue}
