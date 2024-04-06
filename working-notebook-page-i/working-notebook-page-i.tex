@@ -129,6 +129,18 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\bigdownarrow}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw[->] (0,2.5) -- (0.3,0.2);
+	\end{tikzpicture}
+}
+
+\newcommand{\customrightarrow} {
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw[->] (-0.8,0) -- (-0.2,0);
+	\end{tikzpicture}
+}
+
 \renewcommand{\labelitemi}{$\textendash$}
 \setulcolor{blue}
 
@@ -275,7 +287,7 @@ cinquefoil see note \ul{Weeds} \Longstack[l]{{p.VIII} {6/4/75}}
 %arrow
 \scriptsize
 \color{red}
-(Se$\color{black}\smallcross$e
+$\customrightarrow$(Se$\color{black}\smallcross$e
  notes$\color{black}\smallcross$ \ul{Weeds} 
 \setulcolor{blue}
 pVIII + \ul{work} \ul{cinquefoil} with %arrow
@@ -377,6 +389,7 @@ $\rightarrow$
 	\tiny
 	\begin{minipage}{4in} 
 		\color{blue}
+		\bigdownarrow
 		Taylor\par
 		184, 1135\par
 	\end{minipage}%
