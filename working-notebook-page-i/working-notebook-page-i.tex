@@ -119,7 +119,13 @@
 
 \newcommand{\elevenvenusarrow}{
 	\begin{tikzpicture}[remember picture,overlay]
-		\draw[->] (0,0.1) .. controls (5,0)  .. (6.9,-0.1);
+		\draw[->] (0,0.1) .. controls (5,-0.1)  .. (6.9,-0.1);
+	\end{tikzpicture}
+}
+
+\newcommand{\elevenasteriskarrow}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw[->] (-0.3,-0.1) .. controls (-0.8,-1.5) and (-0.4,-2.4)  .. (0.3,-2.8);
 	\end{tikzpicture}
 }
 
@@ -347,7 +353,7 @@ $\rightarrow$
 \begin{textblock*}{4in}(0.3cm,22cm)%
 	\normalsize
 	\begin{minipage}{4in} 
-		\color{blue}11.$\elevenvenusarrow$\par		
+		\color{blue}11.$\elevenvenusarrow$$\elevenasteriskarrow$\par		
 	\end{minipage}%
 \end{textblock*}%
 
@@ -373,6 +379,14 @@ $\rightarrow$
 		\color{blue}
 		Taylor\par
 		184, 1135\par
+	\end{minipage}%
+\end{textblock*}%
+
+\begin{textblock*}{4in}(1cm,25cm)%
+	\tiny
+	\begin{minipage}{4in} 
+		\color{black}
+		\Circled{\normalsize$\ast$}
 	\end{minipage}%
 \end{textblock*}%
 
