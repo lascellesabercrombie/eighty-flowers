@@ -135,6 +135,12 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\taylorasteriskarrow}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw[->] (0,0) -- (0.25,0);
+	\end{tikzpicture}
+}
+
 \newcommand{\bigdownarrow}{
 	\begin{tikzpicture}[remember picture,overlay]
 		\draw[->] (0,2.5) -- (0.3,0.2);
@@ -396,7 +402,7 @@ $\rightarrow$
 	\begin{minipage}{4in} 
 		\color{blue}
 		\bigdownarrow
-		Taylor\par
+		Taylor$\taylorasteriskarrow$\par
 		184, 1135\par
 	\end{minipage}%
 \end{textblock*}%
