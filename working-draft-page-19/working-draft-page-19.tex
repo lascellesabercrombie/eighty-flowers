@@ -18,8 +18,8 @@
 
 \newcommand{\ulfelttip}[1]{%
     \tikz[baseline=(to_underline.base)]{
-        \color{red}
         \node[inner sep=0pt,outer sep=0pt] (to_underline) {#1};
+        \color{red}
         \draw[line width=0.05in, opacity=0.6] ([xshift=1pt,yshift=-2pt]to_underline.south west) -- ([xshift=-1pt,yshift=-2pt]to_underline.south east);
     }%
 }%
@@ -114,17 +114,17 @@ illust.p9 \ul{Specularia}\par
 \savestack{\specularianote}{\Longstack[r]{ {\ul{perfoliata} (Belleflower}}}%
 \hspace{3cm}\Longunderstack[r]{{\specularianote}  {f.)} }\par 
 \setul{}{2pt}
-has \ul{two} \ul{kinds} \ul{of flowers} .. \ul{earliest}\par
-borne \ul{on} \ul{lower part} \ul{of stems} .. insignificant\par
-in appearance .. set \ul{seeds} \ul{without} recvg\par
-\ul{pollen from} \ul{other} \ul{flowers} .. the \ul{later ones}\par
-\ul{higher up} .. showy .. \ul{visited} by \ul{insects}\par
-\ul{which} carry \ul{pollen} \ul{from} \ul{one} to \ul{the other} \& \ul{bring}\par
-\ul{about} \ul{cross}-\ul{fertilization}. Season:\par
-\ul{May}-\ul{Sept}. Flowers: \ul{solitary} or \ul{2 or} 3\par
-\ul{together} .. 5 (\ul{rarely} 4) \ul{reddish-violet} \ul{petals}\par
-annual 6 in to 2ft \ul{tall stems} \ul{rather}\par
-\ul{weak} \ul{Leaves shell-shaped} \ul{stem}\ul{-clasping}\par
+has \ulfelttip{two} \ulfelttip{kinds} \ulfelttip{of flowers} .. \ulfelttip{earliest}\par
+borne \ulfelttip{on} \ulfelttip{lower part} \ulfelttip{of stems} .. insignificant\par
+in appearance .. set \ulfelttip{seeds} \ulfelttip{without} recvg\par
+\ulfelttip{pollen from} \ulfelttip{other} \ulfelttip{flowers} .. the \ulfelttip{later ones}\par
+\ulfelttip{higher up} .. showy .. \ulfelttip{visited} by \ulfelttip{insects}\par
+\ulfelttip{which} carry \ulfelttip{pollen} \ulfelttip{from} \ulfelttip{one} to \ulfelttip{the other} \& \ulfelttip{bring}\par
+\ulfelttip{about} \ulfelttip{cross}-\ulfelttip{fertilization}. Season:\par
+\ulfelttip{May}-\ulfelttip{Sept}. Flowers: \ulfelttip{solitary} or \ulfelttip{2 or} 3\par
+\ulfelttip{together} .. 5 (\ulfelttip{rarely} 4) \ulfelttip{reddish-violet} \ulfelttip{petals}\par
+annual 6 in to 2ft \ulfelttip{tall stems} \ulfelttip{rather}\par
+\ulfelttip{weak} \ulfelttip{Leaves shell-shaped} \ulfelttip{stem}\ulfelttip{-clasping}\par
 1" or less D.\par 
 \end{minipage}
 
@@ -160,14 +160,13 @@ annual 6 in to 2ft \ul{tall stems} \ul{rather}\par
 	\end{minipage}%
 \end{textblock*}%
 
-\begin{textblock*}{8cm}(6cm,11.5cm)%
+\begin{textblock*}{8cm}(6cm,12cm)%
 	\begin{minipage}{8cm} 
         \color{red}
         ? cf. campanula rotundifolia "bluebell-of-\par
         Scotland or bluebell or harebell,\par
         
-        \ul{[bell = looking-glass L. Z.]}\par
-        \setul{}{0.5pt}
+        \ulfelttip{[bell = looking-glass L. Z.]}\par
         \ul{Century}:
         "many plants take their names from\par
         familiar animal %sic 
