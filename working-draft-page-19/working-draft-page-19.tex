@@ -13,6 +13,7 @@
 \usepackage[absolute]{textpos}
 \usepackage{tikz}
 \usepackage{circledsteps}
+\usepackage{stackengine}
 \usepackage{stix}
 \setlength{\parindent}{0pt}
 \preto{\draft}{\resetlinenumber}
@@ -100,28 +101,27 @@ empty skies .. queen
 and not be seen
 (final stanza)
 \end{minipage}
-
 \hspace{1cm}
 %main rh column
-\begin{minipage}[t]{0.5\textwidth}
+\begin{minipage}[t]{10cm}
 \vspace{3cm}
 \ul{Field Flowers}
 \setulcolor{red}
-illust.p9 \ul{Specularia}
-\ul{perfoliata} (Belleflower
-f.)
+illust.p9 \ul{Specularia}\par
+\savestack{\specularianote}{\Longstack[r]{ {\ul{perfoliata} (Belleflower}}}%
+\hspace{3cm}\Longunderstack[r]{{\specularianote}  {f.)} }\par 
 \setul{}{2pt}
-has \ul{two} \ul{kinds} \ul{of flowers} .. \ul{earliest}
-borne \ul{on} \ul{lower part} \ul{of stems} .. insignificant
-in appearance .. set \ul{seeds} \ul{without} recvg
-\ul{pollen from} \ul{other} \ul{flowers} .. the \ul{later ones}
-\ul{higher up} .. showy .. \ul{visited} by \ul{insects}
-\ul{which} carry \ul{pollen} \ul{from} \ul{one} to \ul{the other} \& \ul{bring}
-\ul{about} \ul{cross}-\ul{fertilization}. Season:
-\ul{May}-\ul{Sept}. Flowers: \ul{solitary} or \ul{2 or} 3
-\ul{together} .. 5 (\ul{rarely} 4) \ul{reddish-violet} \ul{petals}
-annual 6 in to 2ft \ul{tall stems} \ul{rather}
-\ul{weak} \ul{Leaves shell-shaped} \ul{stem}\ul{-clasping}
+has \ul{two} \ul{kinds} \ul{of flowers} .. \ul{earliest}\par
+borne \ul{on} \ul{lower part} \ul{of stems} .. insignificant\par
+in appearance .. set \ul{seeds} \ul{without} recvg\par
+\ul{pollen from} \ul{other} \ul{flowers} .. the \ul{later ones}\par
+\ul{higher up} .. showy .. \ul{visited} by \ul{insects}\par
+\ul{which} carry \ul{pollen} \ul{from} \ul{one} to \ul{the other} \& \ul{bring}\par
+\ul{about} \ul{cross}-\ul{fertilization}. Season:\par
+\ul{May}-\ul{Sept}. Flowers: \ul{solitary} or \ul{2 or} 3\par
+\ul{together} .. 5 (\ul{rarely} 4) \ul{reddish-violet} \ul{petals}\par
+annual 6 in to 2ft \ul{tall stems} \ul{rather}\par
+\ul{weak} \ul{Leaves shell-shaped} \ul{stem}\ul{-clasping}\par
 1" or less D.\par 
 \color{red}
 ? cf. campanula rotundifolia "bluebell-of-
