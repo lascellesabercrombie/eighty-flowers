@@ -15,6 +15,15 @@
 \usepackage{circledsteps}
 \usepackage{stackengine}
 \usepackage{stix}
+
+\newcommand{\ulfelttip}[1]{%
+    \tikz[baseline=(to_underline.base)]{
+        \color{red}
+        \node[inner sep=0pt,outer sep=0pt] (to_underline) {#1};
+        \draw[line width=0.05in, opacity=0.6] ([xshift=1pt,yshift=-2pt]to_underline.south west) -- ([xshift=-1pt,yshift=-2pt]to_underline.south east);
+    }%
+}%
+
 \setlength{\parindent}{0pt}
 \preto{\draft}{\resetlinenumber}
 \renewcommand{\linenumberfont}{\normalfont\bfseries\small\color{red}}
@@ -47,33 +56,27 @@ $\rightarrow$
 \begin{minipage}[t]{0.3\textwidth}
 %lh column
 \setulcolor{red}
-\setul{}{2pt}
-Gray: \ul{corolla}\par
-of \ul{perfect} \ul{flowers}\par
-\ul{rotate} \ul{5-lobed};\par
+Gray: \ulfelttip{corolla}\par
+of \ulfelttip{perfect} \ulfelttip{flowers}\par
+\ulfelttip{rotate} \ulfelttip{5-lobed};\par
 fertilized\par
-\ul{unopening} \&\par
+\ulfelttip{unopening} \&\par
 greatly reduced\par
-flowers \ul{in} \ul{lower}\par
-\ul{axils}; capsule\par
+flowers \ulfelttip{in} \ulfelttip{lower}\par
+\ulfelttip{axils}; capsule\par
 prismatic, cylindric\par
 + awl shaped 3-\par
 locules, opening\par
 by 3 small lateral\par
 valves above the\par
-middle; \ul{axillary}\par
-\ul{blue} + \ul{purplish}\par %"or" in Gray; might be misreading here
+middle; \ulfelttip{axillary}\par
+\ulfelttip{blue} + \ulfelttip{purplish}\par %"or" in Gray; might be misreading here
 flowers earlier\par
 European name\par
-\setul{}{1pt}
 \ul{Specul\`aria Speculum-}\par
 \ul{Veneris}, mirror of V.\par
-\setul{}{2pt}
-was \ul{Spec}
-\setul{}{1pt}
-\ul{ularia perfoliata}\par
-\setul{}{2pt}
-\ul{leaves clasping}, about as\par
+was \ulfelttip{Spec}\ul{ularia perfoliata}\par
+\ulfelttip{leaves clasping}, about as\par
 broad as long expanded\par
 corollas usually borne\par
 at several upper nodes\par

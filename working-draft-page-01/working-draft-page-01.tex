@@ -21,8 +21,8 @@
 \newcommand{\ulfelttip}[1]{%
     \tikz[baseline=(to_underline.base)]{
         \color{red}
-        \node[inner sep=2pt,outer sep=1pt] (to_underline) {#1};
-        \draw[line width=0.05in, opacity=0.6] (to_underline.south west) -- (to_underline.south east);
+        \node[inner sep=0pt,outer sep=0pt] (to_underline) {#1};
+        \draw[line width=0.05in, opacity=0.6] ([xshift=1pt,yshift=-2pt]to_underline.south west) -- ([xshift=-1pt,yshift=-2pt]to_underline.south east);
     }%
 }%
 
