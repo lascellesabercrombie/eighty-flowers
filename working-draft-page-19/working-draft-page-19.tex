@@ -112,6 +112,13 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\bigtickshallow}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.1,0) -- (0.1,-0.2);
+		\draw (0.1,-0.2) -- (3,2.2);
+	\end{tikzpicture}
+}
+
 \setlength{\parindent}{0pt}
 \preto{\draft}{\resetlinenumber}
 \renewcommand{\linenumberfont}{\normalfont\bfseries\small\color{red}}
@@ -187,7 +194,7 @@ illust.p9 \ul{Specularia}\par
 \savestack{\specularianote}{\Longstack[r]{ {$\color{red}\mediumcrossright$\ul{perfoliata} $\color{red}\mediumtickrightunder$(Belleflower}}}%
 \hspace{3cm}\Longunderstack[r]{{\specularianote}  {f.)} }\par 
 \setul{}{2pt}
-has \ulfelttip{two} \ulfelttip{kinds} \ulfelttip{of flowers} .. \ulfelttip{earliest}\par
+has \ulfelttip{two} \ulfelttip{kinds}$\color{red}\bigtickshallow$ \ulfelttip{of flowers} .. \ulfelttip{earliest}\par
 borne \ulfelttip{on} \ulfelttip{lower part} \ulfelttip{of stems} .. insignificant\par
 in appearance .. set \ulfelttip{seeds} \ulfelttip{without} recvg\par
 \ulfelttip{pollen from} \ulfelttip{other} \ulfelttip{flowers} .. the \ulfelttip{later ones}\par
