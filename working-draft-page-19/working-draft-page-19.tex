@@ -43,6 +43,13 @@
         \end{tikzpicture}
 }
 
+\newcommand{\bigcross}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.8,1.3) -- (0.8,-1.3);
+		\draw (0.8, 1.5) -- (-0.8,-1.3);
+	\end{tikzpicture}
+}
+
 \newcommand{\mediumcrossright}{
 	\begin{tikzpicture}[remember picture,overlay]
 		\draw (0.5,0.2) -- (0.8,-0.1);
@@ -148,7 +155,7 @@ $\color{red}\mediumtickright$\ulfelttip{axils}; capsule\par
 prismatic, cylindric\par
 + awl shaped 3-\par
 locules, opening\par
-by 3 small lateral\par
+by 3 sma$\color{red}\bigcross$ll lateral\par
 valves above the\par
 middle; \ulfelttip{axillary}\par
 \ulfelttip{blue} + \ulfelttip{purplish}\par %"or" in Gray; might be misreading here
