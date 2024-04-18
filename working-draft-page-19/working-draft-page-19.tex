@@ -64,6 +64,13 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\smalltickright}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (0.3,0) -- (0.4,-0.2);
+		\draw (0.4,-0.2) -- (1.1,0.5);
+	\end{tikzpicture}
+}
+
 \setlength{\parindent}{0pt}
 \preto{\draft}{\resetlinenumber}
 \renewcommand{\linenumberfont}{\normalfont\bfseries\small\color{red}}
@@ -97,12 +104,12 @@ $\rightarrow$
 %lh column
 \setulcolor{red}
 Gray: \ulfelttip{corolla}\par
-of \ulfelttip{perfect} \ulfelttip{flowers}\par
+of $\color{red}\smalltickright$\ulfelttip{perfect} $\color{red}\smalltickright$\ulfelttip{flowers}\par
 \ulfelttip{rotate} \ulfelttip{5-lobed};\par
 fertilized\par
-\ulfelttip{unopening} \&\par
+$\color{red}\smalltickright$\ulfelttip{unopening} \&\par
 greatly reduced\par
-flowers \ulfelttip{in} \ulfelttip{lower}\par
+flowers $\color{red}\smalltickright$\ulfelttip{in} \ulfelttip{lower}\par
 \ulfelttip{axils}; capsule\par
 prismatic, cylindric\par
 + awl shaped 3-\par
@@ -245,8 +252,8 @@ annual 6 in to 2ft \ulfelttip{tall stems} \ulfelttip{rather}\par
         $\color{red}\mediumcrossright$\ul{leaves} $\color{red}\mediumcrossright$\ul{alternate}\par
         margins sometimes toothed to 1 1/2" L \par
         1-3 \ul{flower} \ul{clusters} \sout{flwr} deep blue\par
-        Sometimes$\color{red}\mediumcrossabove$ white, \ul{erect} $\color{red}\mediumcrossaboveright$\ul{habit}\par
-        {[i.e. \ul{"bell"} \ul{upright}]}\par		
+        Sometimes$\color{red}\mediumcrossabove$ white, $\color{red}\smalltickright$\ul{erect} $\color{red}\mediumcrossaboveright$\ul{habit}\par
+        {[i.e. $\color{red}\smalltickright$\ul{"bell"} $\color{red}\smalltickright$\ul{upright}]}\par		
 	\end{minipage}%
 \end{textblock*}%
 
