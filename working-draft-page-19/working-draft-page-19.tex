@@ -71,6 +71,13 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\mediumtickright}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (0.3,0) -- (0.4,-0.2);
+		\draw (0.4,-0.2) -- (1.5,0.9);
+	\end{tikzpicture}
+}
+
 \setlength{\parindent}{0pt}
 \preto{\draft}{\resetlinenumber}
 \renewcommand{\linenumberfont}{\normalfont\bfseries\small\color{red}}
@@ -110,7 +117,7 @@ fertilized\par
 $\color{red}\smalltickright$\ulfelttip{unopening} \&\par
 greatly reduced\par
 flowers $\color{red}\smalltickright$\ulfelttip{in} \ulfelttip{lower}\par
-\ulfelttip{axils}; capsule\par
+$\color{red}\mediumtickright$\ulfelttip{axils}; capsule\par
 prismatic, cylindric\par
 + awl shaped 3-\par
 locules, opening\par
@@ -121,7 +128,7 @@ middle; \ulfelttip{axillary}\par
 flowers earlier\par
 European name\par
 \ul{Specul\`aria Speculum-}\par
-\ul{Veneris}, mirror of V.\par
+$\color{red}\mediumtickright$\ul{Veneris}, mirror of V.\par
 was \ulfelttip{Spec}\ul{ularia perfoliata}:\par
 \ulfelttip{leaves clasping}, about as\par
 broad as long expanded\par
@@ -170,7 +177,7 @@ annual 6 in to 2ft \ulfelttip{tall stems} \ulfelttip{rather}\par
         \transparent{0.6}
         \textbf{Bell-looking-glass}\par
         \textbf{(one word}\par
-        \textbf{2 hyphens)}\par
+        $\color{blue}\mediumtickright$\textbf{2 hyphens)}\par
 	\end{minipage}%
 \end{textblock*}%
 
