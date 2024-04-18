@@ -78,6 +78,20 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\mediumtickrightunder}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (0.4,-0.3) -- (0.5,-0.5);
+		\draw (0.5,-0.5) -- (1.5,0.4);
+	\end{tikzpicture}
+}
+
+\newcommand{\bigtickdeep}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.2,0.1) -- (0.2,-0.6);
+		\draw (0.2,-0.6) -- (1.1,1.2);
+	\end{tikzpicture}
+}
+
 \setlength{\parindent}{0pt}
 \preto{\draft}{\resetlinenumber}
 \renewcommand{\linenumberfont}{\normalfont\bfseries\small\color{red}}
@@ -126,15 +140,15 @@ valves above the\par
 middle; \ulfelttip{axillary}\par
 \ulfelttip{blue} + \ulfelttip{purplish}\par %"or" in Gray; might be misreading here
 flowers earlier\par
-European name\par
+Euro$\color{red}\mediumtickright$pean name\par
 \ul{Specul\`aria Speculum-}\par
 $\color{red}\mediumtickright$\ul{Veneris}, mirror of V.\par
 was \ulfelttip{Spec}\ul{ularia} $\color{red}\mediumcrossright$\ul{perfoliata}:\par
-\ulfelttip{leaves clasping}, about as\par
+\ulfelttip{leaves} $\color{red}\smalltickright$\ulfelttip{clasping}, about as\par
 broad as long expanded\par
 corollas usually borne\par
 at several upper nodes\par
-capsule pores 
+capsule$\color{red}\bigtickdeep$ pores 
 \setulcolor{blue}\ul{sub}-\par
 median\par
 \vspace{0.2cm}
@@ -150,7 +164,7 @@ median\par
 \ul{Field Flowers}
 \setulcolor{red}
 illust.p9 \ul{Specularia}\par
-\savestack{\specularianote}{\Longstack[r]{ {$\color{red}\mediumcrossright$\ul{perfoliata} (Belleflower}}}%
+\savestack{\specularianote}{\Longstack[r]{ {$\color{red}\mediumcrossright$\ul{perfoliata} $\color{red}\mediumtickrightunder$(Belleflower}}}%
 \hspace{3cm}\Longunderstack[r]{{\specularianote}  {f.)} }\par 
 \setul{}{2pt}
 has \ulfelttip{two} \ulfelttip{kinds} \ulfelttip{of flowers} .. \ulfelttip{earliest}\par
@@ -226,7 +240,7 @@ annual 6 in to 2ft \ulfelttip{tall stems} \ulfelttip{rather}\par
         Venus + Adonis\par
         away .. thru..\par
         empty skies .. queen\par
-        and not be seen\par
+        and$\color{red}\bigtickdeep$ not be seen\par
         (final stanza)\par
 	\end{minipage}%
 \end{textblock*}%
