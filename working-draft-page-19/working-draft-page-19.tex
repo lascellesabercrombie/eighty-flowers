@@ -119,6 +119,13 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\gianttick}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (0.1,0) -- (0.3,-0.2);
+		\draw (0.3,-0.2) -- (5,5);
+	\end{tikzpicture}
+}
+
 \setlength{\parindent}{0pt}
 \preto{\draft}{\resetlinenumber}
 \renewcommand{\linenumberfont}{\normalfont\bfseries\small\color{red}}
@@ -204,7 +211,7 @@ in appearance .. set \ulfelttip{seeds} \ulfelttip{without} recvg\par
 \ulfelttip{May}-\ulfelttip{Sept}. Flowers: \ulfelttip{solitary} or \ulfelttip{2 or} 3\par
 \ulfelttip{together} .. 5 (\ulfelttip{rarely} 4) \ulfelttip{reddish-violet} \ulfelttip{petals}\par
 annual 6 in to 2ft \ulfelttip{tall stems} \ulfelttip{rather}\par
-\ulfelttip{weak} \ulfelttip{Leaves shell-shaped} \ulfelttip{stem}\ulfelttip{-clasping}\par
+\ulfelttip{weak} $\color{red}\gianttick$\ulfelttip{Leaves shell-shaped} \ulfelttip{stem}\ulfelttip{-clasping}\par
 1" or less D.\par 
 \end{minipage}
 
