@@ -16,7 +16,7 @@
 \usepackage{transparent}
 \usepackage{xcolor}
 \usepackage[paperwidth=5.5in, paperheight=13in, top=0.7in, left=0.7in, right=0.7in, bottom=0.1in]{geometry}
-\usetikzlibrary{arrows.meta}
+\usetikzlibrary{arrows.meta,decorations.pathreplacing,calligraphy}
 
 \newcommand{\ulfelttip}[1]{%
     \tikz[baseline=(to_underline.base)]{
@@ -25,6 +25,14 @@
         \draw[line width=0.05in, opacity=0.6] ([xshift=1pt,yshift=-2pt]to_underline.south west) -- ([xshift=-1pt,yshift=-2pt]to_underline.south east);
     }%
 }%
+\newcommand{\multilinerightbrace}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw [pen colour ={blue},
+		decorate, 
+		decoration = {calligraphic brace}
+		] (0.7,0.3) -- (0.7,-0.5);
+	\end{tikzpicture}
+}
 
 %dimensions 5in by 7.75; I have altered to bring in line with p.20 layout]
 \renewcommand{\labelitemi}{-}
@@ -74,7 +82,7 @@ swallowort - Lewis \& Short\par
     \draw[->] plot [smooth] coordinates {(-1.5, -0.1) (-4, 0) (-4, 2) (-2.8, 3)};
 \end{tikzpicture}
 \setulcolor{red}
- poems refer to \ul{Ranunculus ficaria}, a crowfoot.\par
+ poems refer to \ul{Ranunculus ficaria}, a crowfoot.$\multilinerightbrace$\par
 \setulcolor{blue}
 % tick
 \begin{tikzpicture}[remember picture,overlay]
