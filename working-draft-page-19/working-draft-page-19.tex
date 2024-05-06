@@ -1,7 +1,7 @@
 \documentclass[a4paper]{article}
 \usepackage[backend=bibtex]{biblatex}
 \usepackage[utf8]{inputenc}
-\usepackage{soul}
+\usepackage{soul,xcolor}
 \usepackage{rotating}
 \usepackage{ulem}
 \usepackage{lineno, blindtext}
@@ -251,9 +251,12 @@ annual 6 in to 2ft \ulfelttip{tall stems} \ulfelttip{rather}\par
 	\begin{minipage}{3cm} 
         \small
         \color{red}
-        only\par
-        quotes [???]\par
-        Onions [???]\par
+        \setstcolor{blue}
+        \st{only}\par
+        \st{quotes Century}\par
+        \ul{Onions} \st{\{x\}}\par
+        \vspace{0.1cm}
+        \hspace{0.4cm}\st{\{x x\}}\par
 	\end{minipage}%
 \end{textblock*}%
 
