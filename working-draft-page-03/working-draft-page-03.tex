@@ -14,7 +14,7 @@
 \usepackage{stackengine} %for multiple accents on one character
 \usepackage{tikz}
 \usepackage[paperwidth=5.5in, paperheight=15in, margin=0.7in]{geometry}
-\usetikzlibrary{arrows.meta,decorations.pathreplacing,calligraphy}
+\usetikzlibrary{arrows.meta,decorations.pathreplacing,calligraphy,hobby}
 \color{blue}
 \setulcolor{blue}
 
@@ -48,6 +48,11 @@
 		decoration = {calligraphic brace}
 		] (-0.1,-0.3) -- (-0.1,0.2);
 	\end{tikzpicture}
+}
+
+\newcommand{\curvedcircumflex}{
+	\tikz[remember picture,overlay,hobby] 
+	\draw plot coordinates {(0.05,0.25) (0.1,0.3) (0.15,0.25)};
 }
 \begin{document}
 \begin{center}
@@ -85,7 +90,7 @@ Notes \& orig. drafts\\
 \color{blue}
 \normalsize
 \item \tickitem gaping {$\stackrel{\hbox{bot. of}}{\hbox{pod}}$}  flower
-\item \tickitem Pall\'adas: {$\stackrel{\hbox{\tiny{ochnay}}}{\hbox{\textgreek{Ὄχνη,}}}$} {$\stackrel{\hbox{\tiny{hand, skill of an artist}}}{\hbox{\textgreek{χειρὸς εμὴς}}}$}\\
+\item \tickitem Pall\'adas: {$\stackrel{\hbox{\tiny{ochnay}}}{\hbox{\textgreek{Ὄχνη,}}}$}{$\stackrel{\hbox{\tiny{hand, skill of an artist}}}{\hbox{\textgreek{χειρὸς εμ$\curvedcircumflex$ης}}}$}\\
 
 %check accents for all Greek
 {$\stackrel
