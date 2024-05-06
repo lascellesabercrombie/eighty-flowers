@@ -47,6 +47,17 @@
     \end{tikzpicture}
 }
 
+\newcommand{\downarrowabove}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[] at (0.275,0.25) {$\downarrow$};
+    \end{tikzpicture}
+}
+
+\newcommand{\leftarrowabove}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[] at (0.8,0.3) {$\leftarrow$};
+    \end{tikzpicture}
+}
 %dimensions 5in by 7.75; I have altered to bring in line with p.20 layout]
 \renewcommand{\labelitemi}{-}
 \setulcolor{red}
@@ -119,7 +130,14 @@ $\uparrow$ L = little frog $\stackrel{\hbox{Buttercup}}{\hbox{(i.e. meadow habit
 Oct 18/74
 \small
 \color{red}
-John Parkinson 1629 \ul{Paradisus Terrestis}\par 
+\tiny
+$\downarrowabove$
+\small
+John 
+\tiny
+$\leftarrowabove$
+\small
+Parkinson 1629 \ul{Paradisus Terrestis}\par 
 ``The rarity \& novelty of this herb, being\par
 for the most part but in the gardens of great persons, doth\par
 cause it to be of great regard"
