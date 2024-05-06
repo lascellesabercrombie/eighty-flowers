@@ -85,6 +85,22 @@
     \end{tikzpicture}
 }
 
+\newcommand{\shortvowelstress}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \color{blue}
+        \node[] at (0.1,0.15) {{\u{}}};
+        \color{red}
+        \node[] at (0.1,0.25) {{\'{}}};
+    \end{tikzpicture}
+}
+
+\newcommand{\shortvowel}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \color{blue}
+        \node[] at (0.1,0.15) {{\u{}}};
+    \end{tikzpicture}
+}
+
 %dimensions 5in by 7.75; I have altered to bring in line with p.20 layout]
 \renewcommand{\labelitemi}{-}
 \setulcolor{red}
@@ -340,22 +356,9 @@ sour gum, pepperidge \color{red} (\ul{Cheyney}, What Tree is That?)
 \ulfelttip{\color{blue}peace} \& \ulfelttip{\color{blue}the ever-encroaching appetite} \ulfelttip{\color{blue}for God}"\par
 \setulcolor{blue}
 Melville, \ul{Pierre} Bk xxv IV (p386 \ul{Signet} ed.)
-
-%absolute positioned text
-\color{red}
-\begin{textblock*}{5cm}(1cm,27.2cm)%
-    \small
-    \begin{minipage}{5cm} 
-        \color{red}
-        unwithering\par
-        unfading $\rightarrow$
-        \normalsize
-  \end{minipage}%
-  \end{textblock*}%
-
 \color{red}
 \begin{adjustwidth}{-0.5in}{-0.5in}
-catnip - N\'epeta %more accents 
+catnip L N$\shortvowelstress$ep$\shortvowel$eta %more accents 
 Catmint .. per. \& ann. herbs .. \sout{tall}\par
 \sout{to erect or trailing} tall \& erect, or dwarf trailing, generally (over)
 \end{adjustwidth}
@@ -369,6 +372,7 @@ Catmint .. per. \& ann. herbs .. \sout{tall}\par
     \draw (2.3,1.7) --  (3, 0.7) -- (5, 4.5);
     \draw (4.8,1.7) --  (5.5, 0.7) -- (7.5, 4.5);
 \end{tikzpicture}
+%absolute positioned text
 % orig. note (top right)
 \begin{textblock*}{5cm}(11cm,2.5cm)%
 	\begin{minipage}{5cm} 
@@ -444,10 +448,10 @@ Catmint .. per. \& ann. herbs .. \sout{tall}\par
         (saxifrage\par
         family)
         \normalsize
-  \end{minipage}%
-  \end{textblock*}%
+    \end{minipage}%
+\end{textblock*}%
 
-  \begin{textblock*}{2in}(0.9cm,24.8cm)%
+\begin{textblock*}{2in}(0.9cm,24.8cm)%
     \small
     \begin{minipage}{2in} 
         \color{blue}
@@ -456,7 +460,18 @@ Catmint .. per. \& ann. herbs .. \sout{tall}\par
         \color{red}
         \sout{\{x x\}}\par
         \normalsize
-  \end{minipage}%
-  \end{textblock*}%
+    \end{minipage}%
+\end{textblock*}%
+
+\color{red}
+\begin{textblock*}{5cm}(1cm,27.2cm)%
+    \small
+    \begin{minipage}{5cm} 
+        \color{red}
+        unwithering\par
+        unfading $\rightarrow$
+        \normalsize
+    \end{minipage}%
+\end{textblock*}%
 
 \end{document}
