@@ -65,6 +65,13 @@
         \draw[<->] (-5, 0.6) .. controls (-4, 0.5) and (-0.5, 0.5) .. (0.15, 0.1);
     \end{tikzpicture}\
 }
+
+\newcommand{\geraniumline} {
+    \begin{tikzpicture}[remember picture,overlay]
+        \draw (0.5,-0.1) -- (-0.5, -0.9);
+    \end{tikzpicture}
+}
+
 %dimensions 5in by 7.75; I have altered to bring in line with p.20 layout]
 \renewcommand{\labelitemi}{-}
 \setulcolor{red}
@@ -263,9 +270,10 @@ Oct 28/74 Pt..J.\par
 \color{red}
 \footnotesize
 \begin{minipage}{2in} 
-    Taylor lists wild geranium under\par
-    \ul{geraniaceae} -/a separate\par
-    family
+    Taylor lists wild $\geraniumline$geranium under\par
+    \setulcolor{red}
+    \ul{geraniaceae} - a {\Longunderstack{separate family}}\par
+    \setulcolor{blue}
 \end{minipage}%
 \hfill
 \begin{minipage}{0.6in}
