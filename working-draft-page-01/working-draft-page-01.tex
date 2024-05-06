@@ -11,6 +11,7 @@
 \usepackage{latexsym}
 \usepackage{parskip}
 \usepackage{soul}
+\usepackage{stackengine}
 \usepackage{stix}
 \usepackage{tikz}
 \usepackage{transparent}
@@ -32,6 +33,18 @@
 		decoration = {calligraphic brace}
 		] (0.7,0.3) -- (0.7,-0.5);
 	\end{tikzpicture}
+}
+
+\newcommand{\twoabove}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[] at (0.3,0.3) {2};
+    \end{tikzpicture}
+}
+
+\newcommand{\threeabove}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[] at (0.2,0.25) {3};
+    \end{tikzpicture}
 }
 
 %dimensions 5in by 7.75; I have altered to bring in line with p.20 layout]
@@ -100,18 +113,7 @@ $\uparrow$ L = little frog $\stackrel{\hbox{Buttercup}}{\hbox{(i.e. meadow habit
 \item Lavender cotton, \ul{Santolina chamaecypar-} \par
 \ul{-issus} \ul{Kamm} p 206 illust \#25 Pt. J, planted\par 
 %looks v like a new entry for -issus but clearly cont from previous line
-\color{red}
-\tiny
-\newsavebox{\abc}
-\savebox{\abc}{
-    \fcolorbox{blue}{white}{
-        \begin{minipage}{0.5in}
-            How great fallen are the great L.Z.
-        \end{minipage}
-    }
-}
-\begin{turn}{25}\usebox{\abc}\end{turn}
-%a 2 and 3 in there? presumably an LZ quotation
+
 \color{blue}
 \normalsize
 Oct 18/74
@@ -367,4 +369,18 @@ Catmint .. per. \& ann. herbs .. \sout{tall}\par
 	\end{minipage}%
 \end{textblock*}%
 
+\begin{textblock*}{5cm}(0.2cm,10.5cm)%
+    \footnotesize
+    \color{red}
+            \rotatebox{15}{
+            \fcolorbox{blue}{white}{
+                \begin{minipage}{1.5cm}
+                \vspace{0.2cm}
+                How {\Longstack{$\tiny\twoabove$great fallen}}\par 
+                $\tiny\threeabove$are the great\par 
+                L.Z.
+                \end{minipage}
+            }
+        }
+\end{textblock*}%
 \end{document}
