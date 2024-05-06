@@ -72,6 +72,12 @@
     \end{tikzpicture}
 }
 
+\newcommand{\taylormaculatumline}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \draw (-0.1,0) .. controls (-0.5, -0.8) .. (-0.1, -1.5);
+    \end{tikzpicture}
+}
+
 %dimensions 5in by 7.75; I have altered to bring in line with p.20 layout]
 \renewcommand{\labelitemi}{-}
 \setulcolor{red}
@@ -270,7 +276,7 @@ Oct 28/74 Pt..J.\par
 \color{red}
 \footnotesize
 \begin{minipage}{2in} 
-    Taylor lists wild $\geraniumline$geranium under\par
+    $\taylormaculatumline$Taylor lists wild $\geraniumline$geranium under\par
     \setulcolor{red}
     \ul{geraniaceae} - a {\Longunderstack{separate family}}\par
     \setulcolor{blue}
@@ -297,25 +303,9 @@ Oct 28/74 Pt..J.\par
 * 
 \color{blue}
 \& chocolateflower\par
-\setulcolor{blue}
-\color{red}
-\begin{textblock*}{3.22in}(0.5cm,22cm)%
-    \small
-    \begin{minipage}{3.22in} 
-        \color{red}
-        \setulcolor{red}
-        but $\stackrel{\hbox{is}}{\hbox{$\caretinsert$}}$ not $\ast$\par
-        \ul{Heuchera}\par
-        also called\par
-         alumroot\par
-        (saxifrage\par
-        family)
-        \normalsize
-  \end{minipage}%
-  \end{textblock*}%
 \color{blue}
 \setstcolor{red}
-[\st{the relation to those}]
+[\st{no relation to those}]
 \begin{tikzpicture}[remember picture,overlay]
     \color{red}
     \draw[->] (-0.1, 0.1) .. controls (-1.5, 0) .. (-3, 0.25);
@@ -442,5 +432,22 @@ Catmint .. per. \& ann. herbs .. \sout{tall}\par
         ??
     \end{minipage}%
 \end{textblock*}%
+
+\setulcolor{blue}
+\color{red}
+\begin{textblock*}{5cm}(0.5cm,21.2cm)%
+    \small
+    \begin{minipage}{5cm} 
+        \color{red}
+        \setulcolor{red}
+        but $\stackrel{\hbox{is}}{\hbox{$\caretinsert$}}$ not $\ast$\par
+        \ul{Heuchera}\par
+        also called\par
+         alumroot\par
+        (saxifrage\par
+        family)
+        \normalsize
+  \end{minipage}%
+  \end{textblock*}%
 
 \end{document}
