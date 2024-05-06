@@ -50,6 +50,13 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\downarrowabove}{
+	\tiny
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[] at (0.28,0.3) {$\downarrow$};
+    \end{tikzpicture}
+}
+
 \newcommand{\curvedcircumflex}{
 	\tikz[remember picture,overlay,hobby] 
 	\draw plot coordinates {(0.05,0.25) (0.1,0.3) (0.15,0.25)};
@@ -90,7 +97,7 @@ Notes \& orig. drafts\\
 \color{blue}
 \normalsize
 \item \tickitem gaping {$\stackrel{\hbox{bot. of}}{\hbox{pod}}$}  flower
-\item \tickitem Pall\'adas: {$\stackrel{\hbox{\tiny{ochnay}}}{\hbox{\textgreek{Ὄχνη,}}}$}{$\stackrel{\hbox{\tiny{hand, skill of an artist}}}{\hbox{\textgreek{χειρὸς εμ$\curvedcircumflex$ης}}}$}\\
+\item \tickitem Pall\'adas: {$\stackrel{\hbox{\tiny{ochnay}}}{\hbox{\textgreek{Ὄχνη,}}}$}{$\stackrel{\hbox{\tiny{hand, skill of an artist}}}{\hbox{\textgreek{$\downarrowabove$χειρὸς εμ$\curvedcircumflex$ης}}}$}\\
 
 %check accents for all Greek
 {$\stackrel
