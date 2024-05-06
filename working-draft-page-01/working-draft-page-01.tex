@@ -58,6 +58,13 @@
         \node[] at (0.8,0.3) {$\leftarrow$};
     \end{tikzpicture}
 }
+
+\newcommand{\howgreatarrow} {
+    \begin{tikzpicture}[remember picture,overlay]
+        \color{black}
+        \draw[<->] (-5, 0.6) .. controls (-4, 0.5) and (-0.5, 0.5) .. (0.15, 0.1);
+    \end{tikzpicture}\
+}
 %dimensions 5in by 7.75; I have altered to bring in line with p.20 layout]
 \renewcommand{\labelitemi}{-}
 \setulcolor{red}
@@ -177,12 +184,6 @@ pl\ul{ant}
     \draw (-0.8,0.3) --  (-0.5, -0.1) -- (0.5, 0.5);
 \end{tikzpicture}
 (lily family)
-\hspace{0.5in}
-{$\stackrel{\hbox{\footnotesize{i.e. LZ How great are the fallen}}}{\hbox{}}$}
-\begin{tikzpicture}[remember picture,overlay]
-    \color{blue}
-    \draw[->] (-5.5, 0.3) .. controls (-3, 0.5) .. (-2.5, 0.2);
-\end{tikzpicture}\
 \item \ulfelttip{\color{blue} thyme} (\ulfelttip{\color{blue}\ul{time}}) (Pt. J. {$\stackrel{\hbox{Aug-}}{\hbox{Sep}}$}74) ($\stackrel{\hbox{see \#70}}{\hbox{pVI v.i}}$
 \begin{tikzpicture}[remember picture,overlay,line width=0.05in,opacity=0.6]
     \color{red}
@@ -393,14 +394,21 @@ Catmint .. per. \& ann. herbs .. \sout{tall}\par
     \footnotesize
     \color{red}
             \rotatebox{15}{
-            \fcolorbox{blue}{white}{
+            \fcolorbox{black}{white}{
                 \begin{minipage}{1.5cm}
                 \vspace{0.2cm}
-                How {\Longstack{$\tiny\twoabove$great fallen}}\par 
-                $\tiny\threeabove$are the great\par 
+                How {\Longstack{\tiny$\twoabove$\footnotesize
+                great fallen}}\par 
+                \tiny$\threeabove$\footnotesize
+                are the great\par 
                 L.Z.
                 \end{minipage}
             }
         }
+\end{textblock*}%
+\begin{textblock*}{5cm}(6.5cm,12.8cm)%
+    \color{black}
+    $\howgreatarrow$
+    \footnotesize{i.e. LZ How great are the fallen}
 \end{textblock*}%
 \end{document}
