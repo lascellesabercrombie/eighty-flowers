@@ -153,6 +153,16 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\ulredblack}[1]{%
+    \tikz[baseline=(to_underline.base)]{
+        \node[inner sep=0pt,outer sep=0pt] (to_underline) {#1};
+        \color{black}
+        \draw ([xshift=1pt,yshift=-2pt]to_underline.south west) -- ([xshift=-1pt,yshift=-2pt]to_underline.south east);
+        \color{red}
+        \draw ([xshift=1pt,yshift=-4pt]to_underline.south west) -- ([xshift=-1pt,yshift=-4pt]to_underline.south east);
+    }%
+}%
+
 \renewcommand{\labelitemi}{$\textendash$}
 \setulcolor{blue}
 
@@ -173,7 +183,7 @@ substi$\color{blue} \smalltick \color{red}$tutes\par
 \begin{minipage}{0.3\textwidth}
 \color{black}
 \center
-80 Flowers
+\ulredblack{80 Flowers}
 \end{minipage}
 \begin{minipage}{0.2\textwidth}
 \color{red}
