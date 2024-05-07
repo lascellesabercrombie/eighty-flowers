@@ -18,6 +18,14 @@
 \setlength{\parindent}{0pt}
 \preto{\draft}{\resetlinenumber}
 \renewcommand{\linenumberfont}{\normalfont\bfseries\small\color{red}}
+
+\newcommand{\caretsquarerootingline}{
+    \begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.15,0.02) .. controls (-0.2,0.4) .. (-0.85,0.4);
+	\end{tikzpicture}
+}
+
+
 \setstcolor{red}
 \begin{document}
 \color{red}
@@ -180,7 +188,7 @@ $\stackrel{\hbox{\st{the} \Circled{square-rooting}
 \setstcolor{red}
 \color{blue}{\st{lilac flowered}}
 \color{red}{$\caretinsert$}
-}}$\par
+}}$$\caretsquarerootingline$\par
 \setstcolor{blue}
 \color{blue} $\stackrel{\hbox{stems thyme's spikes}}{\hbox{\st{underground rooting stems}}}$ $\stackrel{\hbox{often}}{\hbox{\tiny \color{red}\Circled{x}}}$$\stackrel{\hbox{\tiny \color{red}\Circled{x}}}{\hbox{better}}$\par
 \begin{tikzpicture}[remember picture,overlay]
