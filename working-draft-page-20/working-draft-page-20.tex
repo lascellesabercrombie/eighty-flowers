@@ -20,10 +20,10 @@
 \preto{\draft}{\resetlinenumber}
 \renewcommand{\linenumberfont}{\normalfont\bfseries\small\color{red}}
 
-\newcommand{\claspabove}{
+\newcommand{\textaboveoverlay}[1]{
 \color{red}
 \begin{tikzpicture}[remember picture,overlay]
-    \node[] at (0.5,0.4) {clasp};
+    \node[] at (0.5,0.4) {#1};
 \end{tikzpicture}
 }
 
@@ -57,8 +57,8 @@ b. 7/22/75 \hfill \Circled{\color{blue}{Venus's Looking-glass}}\par
 \begin{linenumbers} \draft
 Bell-looking-glass upright leaf-shells ring the\par
 herb\color{red}\textsuperscript{\Circled{$\ast$}}\color{blue} stem two flowers climb\par
-come May near-ground-axil \color{red} $\stackrel{\hbox{seeded}}{\hbox{$\caretinsert$}}$\color{blue}unopened \st{clasp}\par
-$\claspabove$\st{seeded} soon June higher perf\'ect\par
+come May near-ground-axil \color{red} \textaboveoverlay{seeded}$\caretinsert$\color{blue}unopened \st{clasp}\par
+$\textaboveoverlay{clasp}$\st{seeded} soon June higher perf\'ect\par
 red-purple specular as speculum venery's\par
 \st{hunt} mirror-bell flowers one for three\par
 no harebell hanging chase \ul{azur'd}\par
