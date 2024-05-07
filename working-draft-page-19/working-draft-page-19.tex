@@ -133,6 +133,12 @@
         \end{tikzpicture}
 }
 
+\newcommand{\cymbelineline}{
+        \begin{tikzpicture}[remember picture,overlay]
+                \draw (-0.1,-0.05) -- (-0.55, -0.2);
+        \end{tikzpicture}
+}
+
 \setlength{\parindent}{0pt}
 \preto{\draft}{\resetlinenumber}
 \renewcommand{\linenumberfont}{\normalfont\bfseries\small\color{red}}
@@ -341,7 +347,7 @@ annual 6 in to 2ft \ulfelttip{tall stems} \ulfelttip{rather}\par
         .. rarely seen with the flowers.\par
         \setulcolor{blue}
         % see if alignment can be improved for lines below
-        W.S. \sout{Shak.} Cym.IV 2: \ul{The azur'd hare-bell}\par
+        W.S. \sout{Shak.} Cym.IV 2$\cymbelineline$: \ul{The azur'd hare-bell}\par
         $\color{blue}\liketovenusarrow$\ul{like thy veins} \Longstack{{222} {}} \Longstack{John Lindley} \Longstack{1799 -1865}\par
         (restricted) the spelling harebell\par
         \setulcolor{red}
