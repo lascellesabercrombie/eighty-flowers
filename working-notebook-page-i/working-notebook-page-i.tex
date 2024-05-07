@@ -41,6 +41,16 @@
 		] (-0.1,-0.5) -- (-0.1,0.2);
 	\end{tikzpicture}
 }
+
+\newcommand{\smallbrace}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw [pen colour ={red},
+		decorate, 
+		decoration = {calligraphic brace}
+		] (0,-0.1) -- (0,0.3);
+	\end{tikzpicture}
+}
+
 \newcommand{\marginalplus}{
 	\begin{tikzpicture}[remember picture,overlay]
 		\draw (-0.1,0.05) -- (0.1,0.05);
@@ -150,6 +160,13 @@
 \newcommand{\customrightarrow} {
 	\begin{tikzpicture}[remember picture,overlay]
 		\draw[->] (-0.8,0) -- (-0.2,0);
+	\end{tikzpicture}
+}
+
+\newcommand{\buttercupclematisarrow} {
+	\color{black}
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw[->] (0,0) -- (0.5,0.1);
 	\end{tikzpicture}
 }
 
@@ -330,7 +347,7 @@ Venus's-looking-glass = {\Longstack[l]{{Campanula \ul{Speculum}} {(bellflower fa
 Field Flowers p9 illust \color{red}belle looking glass\par
 \normalsize
 \color{black}
-\item clematis (\ul{Crispa} \color{blue}= \color{black} ``blue jasmine'' \color{blue}= \color{black} ``bluebell''\par
+\item $\smallbrace$clematis (\ul{Crispa} \color{blue}= \color{black} ``blue jasmine'' \color{blue}= \color{black} ``bluebell''\par
 or curly : shrubby vine)
 \end{enumerate}
 
@@ -435,7 +452,7 @@ $\rightarrow$
 	\tiny
 	\begin{minipage}{4in} 
 		\color{blue}
-		buttercup\par
+		buttercup$\buttercupclematisarrow$\par
 		family \color{red}= ranunculus or crowfoot family\par
 		\color{red}
 		called Spring\par
