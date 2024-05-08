@@ -1,6 +1,7 @@
 \documentclass[a4paper,10pt]{article}
 
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[absolute]{textpos}
 \usepackage{changepage}
 \usepackage{ulem}
@@ -16,7 +17,7 @@
 \usepackage{tikz}
 \usepackage{transparent}
 \usepackage{xcolor}
-\usepackage[paperwidth=5.5in, paperheight=13in, top=0.7in, left=0.7in, right=0.7in, bottom=0.1in]{geometry}
+\usepackage[paperwidth=5.5in, paperheight=15.5in, top=0.7in, left=0.7in, right=0.7in, bottom=0.1in]{geometry}
 \usetikzlibrary{arrows.meta,decorations.pathreplacing,calligraphy}
 
 \newcommand{\ulfelttip}[1]{%
@@ -372,6 +373,22 @@ Catmint .. per. \& ann. herbs .. \sout{tall}\par
     \draw (2.3,1.7) --  (3, 0.7) -- (5, 4.5);
     \draw (4.8,1.7) --  (5.5, 0.7) -- (7.5, 4.5);
 \end{tikzpicture}
+% source references
+\color{black}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+\large
+{\fontfamily{lmss}\selectfont
+\setulcolor{black}
+\setlength{\parskip}{15pt}
+\begin{center}
+\center\ul{Source references}
+\end{center}
+\normalsize
+Gray's \textit{Manual of Botany} - entries for Comptonia (525), Géum (817-818), Nýssa (1048-49).\par
+Kamm, \textit{Old Time Herbs for Northern Gardens} - entries for Celandine (40-42), Lavender Cotton (206).\par
+Melville, \textit{Pierre XXV}, iv (386).\par
+Taylor's \textit{Encyclopedia of Gardening} - entries for Chelidonium (215), Buttercup (160), Comptonia (258), Geraniaceae and Geranium (482-483), Heuchera (555), Glecoma (49), Nepeta (792-793).\par 
+}
 %absolute positioned text
 % orig. note (top right)
 \begin{textblock*}{5cm}(11cm,2.5cm)%
