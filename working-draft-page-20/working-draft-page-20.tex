@@ -113,6 +113,13 @@
     \end{tikzpicture}
 }
 
+\newcommand{\circledasteriskupperleft}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \color{red}
+        \node[] at (-0.8,0.3) {\Circled{$\ast$}};
+    \end{tikzpicture}
+}
+
 \setstcolor{red}
 \begin{document}
 \color{red}
@@ -236,11 +243,9 @@ sumac f;\hfill U.S. Cotton-glaumer \hfill glaum'd - grasp, seize %line up to i.e
 \vspace{0.1in}
 W.T.\par
 IV iv 103\par
-\ul{``Here's flowers}\par 
+\ul{``Here's flowers}\par
 \ul{for you}; /Hot\par
-lavender,
-\color{red}\textsuperscript{\Circled{$\ast$}}\par
-\color{blue}
+lavender,\par
 mints, savory..\par
 \begin{tikzpicture}[remember picture,overlay]
 \color{red}
@@ -286,7 +291,7 @@ it - $\color{red}\smalltick$Theo$\color{red}\smalltick$phrastus\par
 \texttoleft{1}Mint a spiked attar hot\par 
 \texttoleft{2}lavender\footnotesize\textaboveoverlayclose{spiced}\small$\caretinsert$\st{savory} \footnotesize\textaboveoverlayclose{laundered}\small\st{that is} savoury \raisebox{0.5em}{purpled}\par
 \setstcolor{red}
-\texttoleft{3}$\circumflexhyphen$groundcovering\color{red}\Circled{\color{blue}{3}}\footnotesize\textaboveoverlayclose{lilac brilliant}{\small spiked}
+\texttoleft{3}$\circledasteriskupperleft\circumflexhyphen$groundcovering\color{red}\Circled{\color{blue}{3}}\footnotesize\textaboveoverlayclose{lilac brilliant}{\small spiked}
 \small
 \color{blue}{runners}\footnotesize\textaboveoverlayclose{\color{red}\st{the}\Circled{square-rooting}}\color{red}{$\caretinsert$}\color{blue}\small{\st{lilac flowered}}\color{red}{$\caretinsert$}\color{blue}
 \setstcolor{blue}
