@@ -91,6 +91,13 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\smallcross}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.1,0.2) -- (0.1,0);
+		\draw (0.1, 0.2) -- (-0.1,0);
+	\end{tikzpicture}
+}
+
 \newcommand{\distantsilkyline}{
     \begin{tikzpicture}[remember picture,overlay]
 		\draw (0.05,-0.05) -- (-0.3,-0.5);
@@ -188,7 +195,7 @@ b. M. Aug 4/75 \hfill \ul{Draft I} \hfill \Circled{\color{blue}{Spearmint}}\par
 \color{blue}
 \draw (5, 0.2) -- (5.2, -0.1) -- (5.5, 0.8);
 \end{tikzpicture}
-\tiny smoke tree; ``chittamwood''\hfill Burns - The Battle of Sherrif-Muir\par %Century entry for "glaum"
+\tiny smoke tree; ``chittam$\color{blue}\smallcross$wood''\hfill Burns - The Battle of Sherrif-Muir\par %Century entry for "glaum"
 \begin{tikzpicture}[remember picture,overlay]
 \color{blue}
 \draw (0, 0.2) -- (0.2, -0.1) -- (0.3, 0.4);
