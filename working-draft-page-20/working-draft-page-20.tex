@@ -1,6 +1,7 @@
 \documentclass[a4paper]{article}
 \usepackage[backend=bibtex]{biblatex}
 \usepackage[utf8]{inputenc}
+\usepackage[absolute]{textpos}
 \usepackage{xcolor}
 \usepackage{soul}
 \usepackage{rotating}
@@ -14,6 +15,7 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,decorations.pathreplacing,calligraphy}
 \usepackage{circledsteps}
+\usepackage{rotating}
 \usepackage{stackengine}
 \usepackage{stix}
 \setlength{\parindent}{0pt}
@@ -21,9 +23,37 @@
 \renewcommand{\linenumberfont}{\normalfont\bfseries\small\color{red}}
 
 \newcommand{\textaboveoverlay}[1]{
-\color{red}
 \begin{tikzpicture}[remember picture,overlay]
     \node[] at (0.5,0.4) {#1};
+\end{tikzpicture}
+}
+
+\newcommand{\textaboveoverlayclose}[1]{
+\begin{tikzpicture}[remember picture,overlay]
+    \node[] at (0.5,0.3) {#1};
+\end{tikzpicture}
+}
+
+\newcommand{\textdirectlyaboveoverlayclose}[1]{
+\begin{tikzpicture}[remember picture,overlay]
+    \node[] at (-0.1,0.3) {#1};
+\end{tikzpicture}
+}
+
+\newcommand{\circumflexhyphen}{
+\begin{tikzpicture}[remember picture,overlay]
+    \node[] at (0.9,0.3) {-};
+    \node[] at (0.9,-0.1) {$\caretinsert$};
+\end{tikzpicture}
+}
+
+\newcommand{\texttoleft}[1]{
+\begin{tikzpicture}[remember picture,overlay]
+    \normalfont
+    \bfseries
+    \small
+    \color{red}
+    \node[] at (-0.4,0.1) {#1};
 \end{tikzpicture}
 }
 
@@ -35,8 +65,52 @@
 
 \newcommand{\caretsquarerootingline}{
     \begin{tikzpicture}[remember picture,overlay]
-		\draw (-0.15,0.02) .. controls (-0.2,0.4) .. (-0.85,0.4);
+        \color{red}
+		\draw (-0.35,0.02) .. controls (-0.35,0.32) .. (-0.82,0.32);
 	\end{tikzpicture}
+}
+
+\newcommand{\oftenbetterline}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \color{red}
+        \draw (-1.5, 0) -- (-1.5, 0.5) -- (-0.75, 0.5) -- (-0.75, -0.1) -- (0, -0.1);
+    \end{tikzpicture}
+}
+
+\newcommand{\smalltickleft}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-1.1,0.5) -- (-1,0.3) -- (-0.5,1);
+	\end{tikzpicture}
+}
+
+\newcommand{\smalltick}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.1,0.2) -- (0,0);
+		\draw (0,0) -- (0.5,0.5);
+	\end{tikzpicture}
+}
+
+\newcommand{\distantsilkyline}{
+    \begin{tikzpicture}[remember picture,overlay]
+		\draw (0.05,-0.05) -- (-0.3,-0.5);
+	\end{tikzpicture}
+}
+
+\newcommand{\multilinerightbrace}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \draw [pen colour ={blue},
+            decorate, 
+            decoration = {calligraphic brace,
+            amplitude=5pt}
+        ] (6.5,1.2) -- (6.5, 0.2);
+    \end{tikzpicture}
+}
+
+\newcommand{\lengthenedthreeline}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \color{blue}
+        \draw (0.1, 0.1) .. controls (2,3) .. (0.9, 3.9);
+    \end{tikzpicture}
 }
 
 \setstcolor{red}
@@ -57,8 +131,8 @@ b. 7/22/75 \hfill \Circled{\color{blue}{Venus's Looking-glass}}\par
 \begin{linenumbers} \draft
 Bell-looking-glass upright leaf-shells ring the\par
 herb\color{red}\textsuperscript{\Circled{$\ast$}}\color{blue} stem two flowers climb\par
-come May near-ground-axil \color{red} \textaboveoverlay{seeded}$\caretinsert$\color{blue}unopened \st{clasp}\par
-$\textaboveoverlay{clasp}$\st{seeded} soon June higher perf\'ect\par
+come May near-ground-axil \color{red} $\color{red}\textaboveoverlay{seeded}\caretinsert$\color{blue}unopened \st{clasp}\par
+$\color{red}\textaboveoverlay{clasp}$\st{seeded} soon June higher perf\'ect\par
 red-purple specular as speculum venery's\par
 \st{hunt} mirror-bell flowers one for three\par
 no harebell hanging chase \ul{azur'd}\par
@@ -120,9 +194,43 @@ sumac f;\hfill U.S. Cotton-glaumer \hfill glaum'd - grasp, seize %line up to i.e
 \end{tikzpicture}
 \end{minipage}
 
+\vspace{6.4cm}
+\scriptsize
+\Circled{1} strong-smelling juice flowers yellowish small \par
+\begin{tikzpicture}[remember picture,overlay]
+\color{red}
+\draw (1.3, 0.6) -- (1.5, 0.5) -- (1.7, 0.75);
+\draw (3.2, 0.6) -- (3.4, 0.5) -- (3.6, 0.75);
+\draw (4.2, 0.6) -- (4.4, 0.5) -- (4.6, 0.75);
+\end{tikzpicture}
+\color{gray}
+\#14 (list 69) Spearmint  \#15 (list 72  $\stackrel{\hbox{see notes}}{\hbox{15/21/75}}$)\par
+\color{blue}
+\Circled{2} polygamous terminal clusters \sout{terminal} fruiting consists of their lengthened$\lengthenedthreeline$\par
+
+
+% absolute positioned text
+
+\begin{textblock*}{5cm}(9.5cm,15.5cm)%
+    \scriptsize
+    \color{blue}
+    \rotatebox{70}{
+	\begin{minipage}{5cm} 
+        
+        \Circled{3} Jer\{?\} \Shortstack{{$\distantsilkyline$distant} {stalks}} plumed\par
+        \hspace{0.1in}silky buff\par
+        \hspace{0.2in}green\par
+        \hspace{0.2in}smoke\par
+        \rotatebox{-70}{$\color{red}\smalltickleft$}
+	\end{minipage}%
+    }
+    
+\end{textblock*}%
+
+\begin{textblock*}{5cm}(0.7cm,16cm)%
 \scriptsize
 %left column
-\begin{minipage}[t]{0.2\textwidth}
+\begin{minipage}[t]{5cm}
 %coincidence that one of smoke tree's names given in Century is Venus's-sumac, following previous flower?
 \setulcolor{red}
 \vspace{0.1in}
@@ -131,7 +239,7 @@ IV iv 103\par
 \ul{``Here's flowers}\par 
 \ul{for you}; /Hot\par
 lavender,
-\color{red}\hfill\textsuperscript{\Circled{*}}\par
+\color{red}\textsuperscript{\Circled{$\ast$}}\par
 \color{blue}
 mints, savory..\par
 \begin{tikzpicture}[remember picture,overlay]
@@ -160,68 +268,45 @@ columbine\par
 \draw (0.7, 0.4) -- (0.9, 0.6);
 \draw (0.9, 0.4) -- (0.7, 0.6);
 \end{tikzpicture}
-c\'{o}tinus gk  $\stackrel{\hbox{wild}}{\hbox{olive}}$\par
-like thyme - frequent
-transplanting improves
-it - Theophrastus
-\begin{tikzpicture}[remember picture,overlay]
-\color{red}
-\draw (-0.5, 0.7) -- (-0.3, 0.6) -- (0.2, 1.1);
-\draw (-1, 0.2) -- (-0.7, 0) -- (-0.5, 0.5);
-\end{tikzpicture}
+c\'{o}tinus Gk  $\stackrel{\hbox{wild}}{\hbox{olive}}$\par
+like thyme - frequent\par
+transplanting improves\par
+it - $\color{red}\smalltick$Theo$\color{red}\smalltick$phrastus\par
 \end{minipage}
+\end{textblock*}%
+
+\begin{textblock*}{7cm}(3.5cm,16.5cm)%
 \small
-\begin{minipage}[t]{0.01\textwidth}
-\color{red}
-\textbf{
-\null \\1\\\\2\\
-\\3
-\\\\4\\5\\\\\\6\\\\7\\\\8
-}
-\end{minipage}
 %to the right
 \setstcolor{blue}
-\begin{minipage}[t]{0.85\textwidth}
+\begin{minipage}[t]{7cm}
 \draft
 \vspace{0.1in}
-Mint a spiked attar hot\par 
-lavender $\caretinsert$$\stackrel{\hbox{spiced}}{\hbox{\st{savory}}}$ $\stackrel{\hbox{laundered}}{\hbox{\st{that is}}}$savoury \raisebox{0.5em}{purpled}\par
+\setstretch{1.5}
+\texttoleft{1}Mint a spiked attar hot\par 
+\texttoleft{2}lavender\footnotesize\textaboveoverlayclose{spiced}\small$\caretinsert$\st{savory} \footnotesize\textaboveoverlayclose{laundered}\small\st{that is} savoury \raisebox{0.5em}{purpled}\par
 \setstcolor{red}
-ground$\stackrel{\hbox{-}}{\hbox{$\caretinsert$}}$covering \color{red}\Circled{\color{blue}{3}} $\stackrel{\hbox{lilac brilliant}}{\hbox{spiked}}$
-$\stackrel{\hbox{\st{the} \Circled{square-rooting} 
-\color{blue}
-\setstcolor{blue}
-\st{<?>}}}
-{\hbox{\color{blue}{runners}
-\color{red}{$\caretinsert$}
-\setstcolor{red}
-\color{blue}{\st{lilac flowered}}
-\color{red}{$\caretinsert$}
-}}$$\caretsquarerootingline$\par
-\setstcolor{blue}
-\color{blue} $\stackrel{\hbox{stems thyme's spikes}}{\hbox{\st{underground rooting stems}}}$ $\stackrel{\hbox{often}}{\hbox{\tiny \color{red}\Circled{x}}}$$\stackrel{\hbox{\tiny \color{red}\Circled{x}}}{\hbox{better}}$\par
-\begin{tikzpicture}[remember picture,overlay]
-\color{red}
-\draw (3.3, 0.6) -- (3.3, 0.8) -- (4.1, 0.8) -- (4.1, 0.3) -- (4.8, 0.3);
-\end{tikzpicture}
-replanted thoughts grown wild olive\par
-haunt pungencies in an old \hfill  \tiny 
-\begin{turn}{90}\Circled{3}\hspace{0.1in}distant\par\end{turn}
-\begin{turn}{90}Jer\{?\} stalks\footnotesize{|}\tiny plumed\par\end{turn}
-\begin{turn}{90}\hspace{0.1in}silky buff\par\end{turn}
-\begin{turn}{90}\hspace{0.2in}green\par\end{turn}
-\begin{turn}{90}\hspace{0.2in}smoke\par\end{turn}\par
+\texttoleft{3}$\circumflexhyphen$groundcovering\color{red}\Circled{\color{blue}{3}}\footnotesize\textaboveoverlayclose{lilac brilliant}{\small spiked}
 \small
-\begin{tikzpicture}[remember picture,overlay]
-\color{red}
-\draw (7.1, 0.8) -- (7.3, 0.6) -- (7.5, 1.5);
-\end{tikzpicture}
-coat in us buff-green $\stackrel{\hbox{\color{red}{distant}}}{\hbox{cotton-glaumer}}$\par
-$\stackrel{\hbox{\color{red}{cotton-glaumer}}}{\hbox{distant smoke}}$smoke trees pierce \ul{spearmint}\par
+\color{blue}{runners}\footnotesize\textaboveoverlayclose{\color{red}\st{the}\Circled{square-rooting}}\color{red}{$\caretinsert$}\color{blue}\small{\st{lilac flowered}}\color{red}{$\caretinsert$}\color{blue}
+\setstcolor{blue}
+\footnotesize\textdirectlyaboveoverlayclose{\{\st{x}\}}
+$\caretsquarerootingline$\par
+\setstcolor{blue}
+\texttoleft{4}\color{blue}
+\setstackgap{S}{0.4pt}
+\Shortstack{{\footnotesize stems thyme's spikes} {\small\st{underground rooting stems}}} \Shortstack{{\small often} {\tiny\color{red}\Circled{x}}} \Shortstack{{\tiny\color{red}\Circled{x}} {\small better}}$\oftenbetterline$\par
+\small
+\texttoleft{5}replanted thoughts grown wild olive\par
+\texttoleft{6}haunt pungencies in an old\par
+\texttoleft{7}coat in us buff-green \Shortstack[l]{{\footnotesize\color{red}{distant}} {cotton-glaumer}}\par
+\texttoleft{8}$\stackrel{\hbox{\footnotesize\color{red}{cotton-glaumer}}}{\hbox{distant smoke}}$smoke trees pierce \ul{spearmint}\par
+
 %in red just below poem
+\setstretch{0}
 \color{red}
 \footnotesize
-\textsuperscript{\Circled{*}}end of line 3 square-rooting \hspace{0.2in} $\stackrel{\hbox{seeds}}{\hbox{\null}}$grass\par
+{\Circled{$\ast$}} end of line 3 square-rooting \hspace{0.2in} \Shortstack{{weeds\{?\}} {grass}}\par
 \begin{tikzpicture}[remember picture,overlay]
 \color{blue}
 \draw (1.9, 0.5) -- (2.1, 0.3) -- (2.3, 0.7);
@@ -231,13 +316,9 @@ coat in us olive stone pit
 \color{blue}
 W. S. 3 \ul{HVI} iii 3 198 \color{red}wild olive\par
 \color{blue}
-Theophrastus ``replanted'' $\stackrel{\hbox{Bacon Natural History}}{\hbox{\P 443}}$ \par
+Theophrastus ``replanted'' \Shortunderstack{{Bacon Natural History} {\P 443}} \par
+$\multilinerightbrace$
 \begin{tikzpicture}[remember picture,overlay]
-\draw [pen colour ={blue},
-decorate, 
-decoration = {calligraphic brace,
-amplitude=5pt}
-] (6,1.2) -- (6, 0.2);
 \color{red}
 \draw (3.2, 0.7) -- (3.4, 0.5) -- (3.6, 0.9);
 \draw (3.9, 0.5) -- (4.1, 0.3) -- (4.3, 0.7);
@@ -252,20 +333,6 @@ lavender (via \ul{launder})
 \draw (-0.7, 0.4) -- (-0.5, 0.2) -- (-0.3, 0.6);
 \end{tikzpicture}
 \end{minipage}
-\scriptsize
-\Circled{1} strong-smelling juice flowers yellowish small \par
-\begin{tikzpicture}[remember picture,overlay]
-\color{red}
-\draw (1.3, 0.6) -- (1.5, 0.5) -- (1.7, 0.75);
-\draw (3.2, 0.6) -- (3.4, 0.5) -- (3.6, 0.75);
-\draw (4.2, 0.6) -- (4.4, 0.5) -- (4.6, 0.75);
-\end{tikzpicture}
-\color{gray}
-\#14 (list 69) Spearmint  \#15 (list 72  $\stackrel{\hbox{see notes}}{\hbox{15/21/75}}$)\par
-\color{blue}
-\Circled{2} polygamous terminal clusters \sout{terminal} fruiting consists of their lengthened\par
-\begin{tikzpicture}[remember picture,overlay]
-\color{blue}
-\draw (8, 0.3) .. controls (10.3,3) .. (9.3, 4.5);
-\end{tikzpicture}
+\end{textblock*}%
+
 \end{document}
