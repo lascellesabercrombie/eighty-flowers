@@ -11,7 +11,7 @@
 \usepackage{etoolbox}
 \usepackage{nopageno}
 \usepackage{parskip}
-\usepackage[paperwidth=5in, paperheight=11in, top=0.1in, bottom=0.1in, left=0.6in, right=0.7in]{geometry} %Z's notepad: 7.75" x 5" (ratio 1.55)
+\usepackage[paperwidth=5in, paperheight=13.5in, top=0.1in, bottom=0.1in, left=0.6in, right=0.7in]{geometry} %Z's notepad: 7.75" x 5" (ratio 1.55)
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,decorations.pathreplacing,calligraphy}
 \usepackage{circledsteps}
@@ -338,6 +338,22 @@ lavender (via \ul{launder})
 \draw (-0.7, 0.4) -- (-0.5, 0.2) -- (-0.3, 0.6);
 \end{tikzpicture}
 \end{minipage}
-\end{textblock*}%
-
+\end{textblock*}\leavevmode
+\\[0.1in]
+\setlength{\parskip}{15pt}
+% source references
+\color{black}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+\large
+{\fontfamily{lmss}\selectfont
+\setulcolor{black}
+\begin{center}
+\center\ul{Source references}
+\end{center}
+\normalsize
+\textit{Taylor's Encyclopedia of Gardening} - entries for Cotinus (271), Mint (755)\par
+\textit{American Thesaurus of Slang} (Berrey \& Van den Bark) - cotton-glaumer (458.21)\par
+\textit{Century Dictionary} - defs for glaum (Burns ref.), lavender (Shakespeare, \textit{Winter's Tale} quote), replant (Shakespeare, \textit{3 Henry VI} and Bacon refs.)\par
+Theophrastus, \textit{Enquiry into Plants} Vol. II (Loeb, Arthur Holt) - 7.5.3 (see index)\par
+}
 \end{document}
