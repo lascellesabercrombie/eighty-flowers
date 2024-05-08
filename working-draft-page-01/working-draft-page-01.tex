@@ -7,6 +7,7 @@
 \usepackage{ulem}
 \usepackage{blindtext}
 \usepackage{rotating}
+\usepackage{hanging}
 \usepackage{nopageno}
 \usepackage{circledsteps}
 \usepackage{latexsym}
@@ -373,23 +374,7 @@ Catmint .. per. \& ann. herbs .. \sout{tall}\par
     \draw (2.3,1.7) --  (3, 0.7) -- (5, 4.5);
     \draw (4.8,1.7) --  (5.5, 0.7) -- (7.5, 4.5);
 \end{tikzpicture}
-\\[0.5in]
-\setlength{\parskip}{15pt}
-% source references
-\color{black}
-\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
-\large
-{\fontfamily{lmss}\selectfont
-\setulcolor{black}
-\begin{center}
-\center\ul{Source references}
-\end{center}
-\normalsize
-Gray's \textit{Manual of Botany} - entries for Comptonia (525), Géum (817-818), Nýssa (1048-49)\par
-Kamm, \textit{Old Time Herbs for Northern Gardens} - entries for Celandine (40-42), Lavender Cotton (206)\par
-Melville, \textit{Pierre XXV}, iv (386)\par
-Taylor's \textit{Encyclopedia of Gardening} - entries for Chelidonium (215), Buttercup (160), Comptonia (258), Geraniaceae and Geranium (482-483), Heuchera (555), Glecoma (49), Nepeta (792-793)\par 
-}
+
 %absolute positioned text
 % orig. note (top right)
 \begin{textblock*}{5cm}(11cm,2.5cm)%
@@ -490,6 +475,25 @@ Taylor's \textit{Encyclopedia of Gardening} - entries for Chelidonium (215), But
         unfading $\rightarrow$
         \normalsize
     \end{minipage}%
-\end{textblock*}%
+\end{textblock*}\leavevmode
+\\[0.5in]
+\setlength{\parskip}{15pt}
+% source references
+\color{black}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+\large
+{\fontfamily{lmss}\selectfont
+\setulcolor{black}
+\begin{center}
+\center\ul{Source references}
+\end{center}
+\normalsize
+\begin{hangparas}{2em}{1}
+    Gray's \textit{Manual of Botany} - entries for Comptonia (525), Géum (817-818), Nýssa (1048-49)\par
+    Kamm, \textit{Old Time Herbs for Northern Gardens} - entries for Celandine (40-42), Lavender Cotton (206)\par
+    Melville, \textit{Pierre XXV}, iv (386)\par
+    Taylor's \textit{Encyclopedia of Gardening} - entries for Chelidonium (215), Buttercup (160), Comptonia (258), Geraniaceae and Geranium (482-483), Heuchera (555), Glecoma (49), Nepeta (792-793)\par 
+\end{hangparas}
+}
 
 \end{document}

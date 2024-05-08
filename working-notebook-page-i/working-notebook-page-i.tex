@@ -4,6 +4,7 @@
 \usepackage{color,soul}
 \usepackage{ulem}
 \usepackage{blindtext}
+\usepackage{hanging}
 \usepackage{rotating}
 \usepackage{nopageno}
 \usepackage{circledsteps}
@@ -11,7 +12,7 @@
 \usepackage{stackengine}
 \usepackage[absolute]{textpos}
 \usepackage{tikz}
-\usepackage[paperwidth=5.3in, paperheight=15in, top=0.5in, bottom=0.1in, left=0.5in, right=0.5in]{geometry}
+\usepackage[paperwidth=5.3in, paperheight=15.5in, top=0.5in, bottom=0.1in, left=0.5in, right=0.5in]{geometry}
 %dimensions 5in by 7.75; added .5 and to allow .25 margin
 \usetikzlibrary{arrows.meta,decorations.pathreplacing,calligraphy,hobby}
 
@@ -195,7 +196,6 @@ substi$\color{blue} \smalltick \color{red}$tutes\par
 \color{blue}
 \bigtick
 \color{red}
-%something has been written over along with ticks - fibit?
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
 \color{black}
@@ -342,7 +342,9 @@ pVIII \& \ul{work} \ul{cinquefoil} with %arrow
 \multilinebrace
 \color{blue}
 \scriptsize
+\setulcolor{blue}
 Venus's-looking-glass = {\Longstack[l]{{Campanula \ul{Speculum}} {(bellflower family)}}}\par 
+\setulcolor{black}
 \color{red}
 Field Flowers p9 illust \color{red}belle looking glass\par
 \normalsize
@@ -352,23 +354,6 @@ or curly : shrubby vine)
 \end{enumerate}\leavevmode
 \\[0.5in]
 \setlength{\parskip}{15pt}
-
-% source references
-\color{black}
-\setlength{\parindent}{0pt}
-\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
-\large
-{\fontfamily{lmss}\selectfont
-\setulcolor{black}
-\begin{center}
-\center\ul{Source references}
-\end{center}
-\normalsize
-Botanical notes taken during trips to Bermuda (Paget) and Bellagio (Lake Como, Italy) in 1972 (notes are at the back of the "A"-22 \& -23 notebook HRC 37.4)\par
-\textit{Taylor's Encyclopedia of Gardening} - Agapanthus (15), Trailing Arbutus (1219), Azalea (88-89), Campanula (182-184), Specularia (1135), Clematis (236), Claytonia (235)\par
-Everett, \textit{A Guide to Wild Flowers: Woodland Flowers} - entries for Wood Anemone (Windflower) (56), Spring Beauty (Claytonia virginica) (45)\par
-Everett, \textit{A Guide to Wild Flowers: Field Flowers} - entry for Venus's-Looking-Glass (9)\par
-}
 
 % text to position absolutely
 
@@ -405,6 +390,7 @@ $\rightarrow$
 % by azalea
 \begin{textblock*}{4in}(0.1cm,13cm)%
 	\tiny
+	\setulcolor{red}
 	\begin{minipage}{4in} 
 		{\setstretch{1.5}
 		red \ul{via Jap} \color{blue} \& Korea\par
@@ -512,6 +498,7 @@ $\rightarrow$
 %bottom right
 \begin{textblock*}{4in}(6cm,26.3cm)%
 	\scriptsize
+	\setulcolor{red}
 	\begin{minipage}{4in} 
 		\ul{clematis jackmani}\par
 		hybrid flowers\par
@@ -519,5 +506,24 @@ $\rightarrow$
 		for contrast only\par
 	\end{minipage}%
 \end{textblock*}%
+
+% source references
+\color{black}
+\setlength{\parindent}{0pt}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+\large
+{\fontfamily{lmss}\selectfont
+\setulcolor{black}
+\begin{center}
+\center\ul{Source references}
+\end{center}
+\normalsize
+\begin{hangparas}{2em}{1}
+	Botanical notes taken during trips to Bermuda (Paget) and Bellagio (Lake Como, Italy) in 1972 (notes are at the back of the "A"-22 \& -23 notebook HRC 37.4)\par
+	\textit{Taylor's Encyclopedia of Gardening} - Agapanthus (15), Trailing Arbutus (1219), Azalea (88-89), Campanula (182-184), Specularia (1135), Clematis (236), Claytonia (235)\par
+	Everett, \textit{A Guide to Wild Flowers: Woodland Flowers} - entries for Wood Anemone (Windflower) (56), Spring Beauty (Claytonia virginica) (45)\par
+	Everett, \textit{A Guide to Wild Flowers: Field Flowers} - entry for Venus's-Looking-Glass (9)\par
+\end{hangparas}
+}
 
 \end{document}

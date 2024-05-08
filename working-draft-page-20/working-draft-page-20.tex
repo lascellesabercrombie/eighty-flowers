@@ -9,6 +9,7 @@
 \usepackage{ulem}
 \usepackage{lineno, blindtext}
 \usepackage{etoolbox}
+\usepackage{hanging}
 \usepackage{nopageno}
 \usepackage{parskip}
 \usepackage[paperwidth=5in, paperheight=13.5in, top=0.1in, bottom=0.1in, left=0.6in, right=0.7in]{geometry} %Z's notepad: 7.75" x 5" (ratio 1.55)
@@ -244,7 +245,7 @@ sumac f;\hfill U.S. Cotton-glaumer \hfill glaum'd - grasp, seize %line up to i.e
 W.T.\par
 IV iv 103\par
 \ul{``Here's flowers}\par
-\ul{for you}; /Hot\par
+\ul{for you}; | Hot\par
 lavender,\par
 mints, savory..\par
 \begin{tikzpicture}[remember picture,overlay]
@@ -351,9 +352,11 @@ lavender (via \ul{launder})
 \center\ul{Source references}
 \end{center}
 \normalsize
-\textit{Taylor's Encyclopedia of Gardening} - entries for Cotinus (271), Mint (755)\par
-\textit{American Thesaurus of Slang} (Berrey \& Van den Bark) - cotton-glaumer (458.21)\par
-\textit{Century Dictionary} - defs for glaum (Burns ref.), lavender (Shakespeare, \textit{Winter's Tale} quote), replant (Shakespeare, \textit{3 Henry VI} and Bacon refs.)\par
-Theophrastus, \textit{Enquiry into Plants} Vol. II (Loeb, Arthur Holt) - 7.5.3 (see index)\par
+\begin{hangparas}{2em}{1}
+    \textit{American Thesaurus of Slang} (Berrey \& Van den Bark) - cotton-glaumer (458.21)\par
+    \textit{Century Dictionary} - defs for glaum (Burns ref.), lavender (Shakespeare, \textit{Winter's Tale} quote), replant (Shakespeare, \textit{3 Henry VI} and Bacon refs.)\par
+    \textit{Taylor's Encyclopedia of Gardening} - entries for Cotinus (271), Mint (755)\par
+    Theophrastus, \textit{Enquiry into Plants} Vol. II (Loeb, Arthur Holt) - 7.5.3 (see index)\par
+\end{hangparas}
 }
 \end{document}
