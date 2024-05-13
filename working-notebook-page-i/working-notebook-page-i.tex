@@ -52,11 +52,9 @@
 	\end{tikzpicture}
 }
 
-\newcommand{\marginalplus}{
+\newcommand{\marginalampersand}{
 	\begin{tikzpicture}[remember picture,overlay]
-		\draw (-0.1,0.05) -- (0.1,0.05);
-		\draw (0,0.15) -- (0,-0.05);
-		
+		\node[] at (-1.1, 0.1) {\&};
 	\end{tikzpicture}
 }
 \newcommand{\biggerbrace}{
@@ -316,7 +314,7 @@ cinquefoil see note \ul{Weeds} \Longstack[l]{{p.VIII} {6/4/75}}
 \color{black}
 \normalsize
 
-\item \color{red}\biggerbrace \marginalplus \color{black}cactus$\color{blue}\smallertick$ \footnotesize(``rose-mauve$\color{blue}\smallertick$ fluted'' \& P's)\par
+\item\color{red}\biggerbrace\color{black}cactus$\color{red}\marginalampersand\color{blue}\smallertick$ \footnotesize(``rose-mauve$\color{blue}\smallertick$ fluted'' \& P's)\par
 \tiny
 \color{blue}
 \ul{P's} \ul{``red} \ul{top,''}$\color{red}\bigtick$ \ul{cardinal} \ul{hat}
