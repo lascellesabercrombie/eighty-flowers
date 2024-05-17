@@ -24,6 +24,12 @@
         \draw[red] (-0.7, 0.1) -- (-0.6, 0) -- (-0.5, 0.5);
     \end{tikzpicture}%
 }
+
+\newcommand{\tickitemblue}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \draw[blue] (-0.7, 0.1) -- (-0.6, 0) -- (-0.5, 0.5);
+    \end{tikzpicture}%
+}
 \newcommand{\crossitem}{%
     \begin{tikzpicture}[remember picture,overlay]
         \draw[red] (-0.9, 0) -- (-0.5, 0.4);
@@ -147,8 +153,8 @@ peartree my handiwork\par
 (grafting the wild pear-tree (pyraster \textgreek{Αχρὰς})\par
 in summer to $\stackrel{\hbox{fruit}}{\hbox{\sout{make}}}$ the upper stem\par
 fragrant-\sout{fruited})
-\item \tickitem as happens in 10 yrs
-\item \tickitem N\stackon[-5pt]{\u{e}}{\'{}}p\u{e}ta
+\item \tickitemblue as happens in 10 yrs
+\item \tickitemblue N\stackon[-5pt]{\u{e}}{\'{}}p\u{e}ta
 (\ul{catnip}
  \stackengine{\stackgap}{$\caretinsert$}{corruption of}{O}{c}
 {\quietstack}{\useanchorwidth}{\stacktype} catmint)
