@@ -103,6 +103,13 @@
     \end{tikzpicture}
 }
 
+\newcommand{\mediumtick}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.1,0.3) -- (0,0);
+		\draw (0,0) -- (1.4,2);
+	\end{tikzpicture}
+}
+
 %dimensions 5in by 7.75; I have altered to bring in line with p.20 layout]
 \renewcommand{\labelitemi}{-}
 \setulcolor{red}
@@ -186,8 +193,8 @@ $\leftarrowabove$
 Parkinson 1629 \ul{Paradisus Terrestis}\par 
 \setulcolor{blue}
 ``The rarity \& novelty of this herb, being\par
-for the most part but in the gardens of great persons, doth\par
-cause it to be of great regard''
+for the most part but in the gar$\mediumtick$dens of gre$\mediumtick$at persons, doth\par
+ca$\mediumtick$use it to be of gre$\mediumtick$at regard''
 %LZ tweaking the quotation?
 \color{blue}
 \normalsize
