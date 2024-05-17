@@ -110,6 +110,13 @@
 	\end{tikzpicture}
 }
 
+\newcommand{\smallundertick}{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (-0.55,-0.1) -- (-0.5,-0.2);
+		\draw (-0.5,-0.2) -- (-0.1,0);
+	\end{tikzpicture}
+}
+
 %dimensions 5in by 7.75; I have altered to bring in line with p.20 layout]
 \renewcommand{\labelitemi}{-}
 \setulcolor{red}
@@ -230,7 +237,7 @@ pl\ul{ant}
     \draw (-0.8,0.3) --  (-0.5, -0.1) -- (0.5, 0.5);
 \end{tikzpicture}
 (lily family)
-\item \ulfelttip{\color{blue} thyme} (\ulfelttip{\color{blue}\ul{time}}) (Pt. J. {$\stackrel{\hbox{Aug-}}{\hbox{Sep}}$}74) ($\stackrel{\hbox{see \#70}}{\hbox{pVI v.i}}$
+\item \ulfelttip{\color{blue} thyme}$\smallundertick$ (\ulfelttip{\color{blue}\ul{time}})$\smallundertick$ (Pt. J. {$\stackrel{\hbox{Aug-}}{\hbox{Sep}}$}74) ($\stackrel{\hbox{see \#70}}{\hbox{pVI v.i}}$
 \begin{tikzpicture}[remember picture,overlay,line width=0.05in,opacity=0.6]
     \color{red}
     \draw (-6.7,0) --  (-6.5, -0.1) -- (-6, 0.5);
