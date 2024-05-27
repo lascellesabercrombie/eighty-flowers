@@ -2,33 +2,22 @@
 
 ## Summary
 
-An effort to typeset several pages from the notebooks kept by Louis Zukofsky used for his late sequence of poems *80 Flowers*.
+Transcriptions of several pages from the notebooks kept by Louis Zukofsky used for his late sequence of poems *80 Flowers*. The PDFs, along with some prefatory notes, are now hosted on [Z-site](https://z-site.net/80-flowers-notebooks/). 
 
 ## Background
 
 "Heart us invisibly thyme time": so begins the epigraph to *80 Flowers*, a sequence of poems by the American poet Louis Zukofsky (1904-1978), best known for his long poem *"A"*. In his later work, he made increasing use of notebooks to gather and condense material from which he would then make poems. The notebooks are held as part of the Zukofsky archive in the Harry Ransom Center, University of Texas, in Austin. Those most relevant to the *80 Flowers* project are the working notebook (in box 12, folder 2 of the archive) and the draft notebook (box 12, folder 3), following Jeffrey Twitchell-Waas's proposed naming convention. The main precedent I had in mind for the project was the facsimile and transcript of T. S. Eliot's *The Waste Land*, published by Faber and Faber in 1971.
 
-## The Project
+## Acknowledgments 
 
-Using LaTeX, I have begun setting these pages. I aim to bring five to a reasonable standard of completion, at which point it might serve as a useful resource for those interested in how Zukofsky composed his later work. 
+Jeffrey Twitchell-Waas provided the bibliography of sources, as well as giving a lot of help on proofreading and deciphering some of the less legible parts of the pages. 
 
-## Challenges
+## Contributions
 
-* A significant one was my own ability to read the notes Zukofsky had made. I am grateful to Jeffrey Twitchell-Waas for correcting various points. 
-* There is a balance to be struck between reproducing features of the notebook page on the one hand, and legibility and intelligbility on the other. For a while, I tried to keep to the ratio of height to width in Zukofsky's page, but that ultimately proved too problematic. 
-* This project was my introduction to working in LaTeX and that is probably reflected in the code to some extent: there is a fair amount of repetition, and some details which work with the appearance of the PDF but that are unintuitive within the code. This approach led to certain visible issues as well, such as the gap between lines 5 and 6 of the "Spearmint" draft, which is due to the note running up the page to the right.
+I'd be very happy if anybody felt like making a PR for any of the following:
 
-## Further Steps
+* *Standardisation* &mdash; There's a balance to be struck between close representation of the source material and a standardised visual language. I think the transcriptions could afford to move further in the direction of the latter, especially in terms of crosses and ticks. This would in turn help with...
+* *Refactoring* &mdash; Lots to be done here, including sharing across files, and possibly breaking up the pages into smaller and more readable arrangements of sections. Easy wins around standardising the way tikz pictures are used - I switched to defining commands part way through the process, which I think is preferable. There are some rough naming conventions observed, but they could be sharpened.
+* *Further pages* &mdash; Take your pick! I think it would be especially nice to get more of the working notebook transcribed or to flesh out some of the pages at the start of the working draft.
 
-* Separate the main body of the page from a set of notes, providing Zukofsky's sources for different quotations and definitions
-* Complete further pages
 
-## Notes
-
-I would be very grateful for any help reworking the code of the TEX file, in terms of making it more concise and lucid or less buggy!
-
-## Images
-<p align="center">
-<img width="455" alt="transcription of page 20 of working draft notebook" src="https://user-images.githubusercontent.com/68148169/158021234-030cf915-23e5-4651-ad82-863f32e39758.png">
-</p>
-<p>*Page 20 of the Working Draft Notebook*</p>
